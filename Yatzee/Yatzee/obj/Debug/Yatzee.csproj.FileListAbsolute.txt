@@ -1,0 +1,6 @@
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\bin\Debug\Yatzee.exe.config
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\obj\Debug\Yatzee.csprojResolveAssemblyReference.cache
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\bin\Debug\Yatzee.exe
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\bin\Debug\Yatzee.pdb
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\obj\Debug\Yatzee.exe
+c:\users\jt222ic\documents\visual studio 2013\Projects\Yatzee\Yatzee\obj\Debug\Yatzee.pdb
