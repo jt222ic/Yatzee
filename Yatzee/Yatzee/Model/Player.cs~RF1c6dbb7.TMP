@@ -13,7 +13,7 @@ namespace Yatzee.Model
         private string Name;
         private bool m_bHoldState = false;
         public int Addup;
-        DateTime Datum;
+        DateTime jan;
         DiceRule Rules;
         List<int> test;
 
@@ -22,13 +22,11 @@ namespace Yatzee.Model
 
             get
             {
-                
-                
                 return Addup;
             }
             set
             {
-                    Addup = value;
+                Addup = value;
             }
           
         }
@@ -36,22 +34,23 @@ namespace Yatzee.Model
         {
             get
             {
-                return Datum;
+                return jan;
             }
             set
             {
-                Datum = value;
+                jan = value;
             }
         }
         public Player(string name,List<int>roll)
         {
             test = roll;
             Name = name;
-            Dice sliceNDice = new Dice();
             Rules = new DiceRule();
-            Datum = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+            jan = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+          
             //Addup = Rules.Sum;
             sendToMemberList(this);
+            
         }
       
 
@@ -59,7 +58,13 @@ namespace Yatzee.Model
         {
             DAL.AddMemberToList(member);
         }
-      
+        //public int GetTotalScore
+        //{
+        //    get
+        //    {
+        //        return TotalScore;
+        //    }
+        //}
         public bool HoldState
         {
             get { return m_bHoldState ; }

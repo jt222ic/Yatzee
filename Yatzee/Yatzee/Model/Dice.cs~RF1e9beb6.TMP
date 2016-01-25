@@ -11,7 +11,7 @@ namespace Yatzee.Model
         Random random = new Random();
         private int i;
         public int RollNumber;
-        List<int> unique;
+        List<int> unique = new List<int>();
         List<int> newDices = new List<int>();
         
       public Dice()
@@ -20,7 +20,6 @@ namespace Yatzee.Model
         }
         public List<int> Roll()
         {
-            unique = new List<int>();
             for (i = 1; i < 6; i++)
             {
                 unique.Add(RollNumber = random.Next(1, 6));

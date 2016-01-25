@@ -9,23 +9,20 @@ namespace Yatzee.Model
     class DiceRule
     {
 
-        Dice Dices;
-        List<int> ListOfDice;
-     
+        
+      public List<int> Testingphase;
        public int Sum = 0;
-       public DiceRule(Dice dice)
-        {
-            Dices = dice;
-        }
+       public int playerValue;
         public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
         {
+            playerValue = PlayerSelectValues;
             Sum = 0;
-            this.ListOfDice = ListOfDice;
-                for (int i = 0; i < ListOfDice.Count; i++ )
+            Testingphase = ListOfDice;
+                for (int i = 0; i < Testingphase.Count; i++ )
                 {
-                    if (ListOfDice[i] == PlayerSelectValues )
+                    if (Testingphase[i] == playerValue)
                     {
-                        Sum += PlayerSelectValues;
+                        Sum += playerValue;
                     }
             }
                 Console.WriteLine("Position {0}", Sum);

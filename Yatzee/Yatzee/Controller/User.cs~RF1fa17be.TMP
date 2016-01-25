@@ -14,7 +14,7 @@ namespace Yatzee.Controller
         Player player;
         Dice roll;
         Computer Ai;
-        DiceRule Rules;
+       List<DiceRule> Rules;
         List<int> ListaAvRoll;
         bool perforReRoll = false;
         bool RerollView = false;
@@ -41,7 +41,7 @@ namespace Yatzee.Controller
                     case 0:
                       ListaAvRoll = roll.Roll();
                       perforReRoll = true;
-                        
+                      
                       show.DisplayRoll(ListaAvRoll, RerollView);
                         break;
 
@@ -144,8 +144,8 @@ namespace Yatzee.Controller
         }
         public void FillTheGap()
         {
-
-            show.DisplayScore(DAL.getMemberList());
+             
+            show.DisplayScore(Rules);
 
             do
             {

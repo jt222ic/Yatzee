@@ -15,7 +15,7 @@ namespace Yatzee.Controller
         Dice roll;
         Computer Ai;
         DiceRule Rules;
-        List<int> ListaAvRoll;
+        List<int> ListaAvRoll = new List<int>();
         bool perforReRoll = false;
         bool RerollView = false;
         int Tossthree = 0;
@@ -27,7 +27,7 @@ namespace Yatzee.Controller
             player = new Player("Human", ListaAvRoll);
             show = new ViewStatus();
         }
-
+       
         public void MainMenu()
         {
             do {
@@ -39,9 +39,9 @@ namespace Yatzee.Controller
                 switch(Choice)
                 {
                     case 0:
+                    
                       ListaAvRoll = roll.Roll();
                       perforReRoll = true;
-                        
                       show.DisplayRoll(ListaAvRoll, RerollView);
                         break;
 
@@ -78,8 +78,9 @@ namespace Yatzee.Controller
                 case 0:
                    return;
                 case 1:
-                   //ListaAvRoll = new List<int>();
                    player = new Player(show.ReturnInfo(), ListaAvRoll);
+                    
+                   
                     break;
                 case 2:
                     Ai = new Computer();
@@ -144,8 +145,8 @@ namespace Yatzee.Controller
         }
         public void FillTheGap()
         {
-
-            show.DisplayScore(DAL.getMemberList());
+             
+            show.DisplayScore(Rules);
 
             do
             {

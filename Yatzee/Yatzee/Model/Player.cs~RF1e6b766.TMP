@@ -22,13 +22,11 @@ namespace Yatzee.Model
 
             get
             {
-                
-                
                 return Addup;
             }
             set
             {
-                    Addup = value;
+                Addup = value;
             }
           
         }
@@ -52,6 +50,15 @@ namespace Yatzee.Model
             Datum = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
             //Addup = Rules.Sum;
             sendToMemberList(this);
+            foreach(Dice dice in roll)
+            for (int i = roll.Count - 1; i >= 0; i--)
+            {
+                if (roll[i] == roll)
+                {
+                    roll.RemoveAt(i);
+                }
+            }
+            
         }
       
 
