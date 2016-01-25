@@ -24,19 +24,14 @@ namespace Yatzee.Model
         DateTime Datum;
         DiceRule Rules;
         List<int> test;
-
         private int NumberOne;
         private int NumberTwo;
         private int NumberThree;
         private int NumberFour;
         private int NumberFive;
         private int NumberSix;
-        
-
-      
         public int GetChance
         {
-
             get
             {
                 return chance;

@@ -14,6 +14,7 @@ namespace Yatzee.Model
         private static readonly string _FILE_PATH = "Listan.bin";      //refrens https://www.youtube.com/watch?v=URw86vBWeGE
 
         private static List<Player> memberList = new List<Player>();
+        private static List<Computer> CompList = new List<Computer>();
 
         public static void SaveToFile()                                                 // referens för användning av Serialized 
         {
@@ -34,6 +35,16 @@ namespace Yatzee.Model
 
             return memberList.AsReadOnly();
 
+        }
+        public static IReadOnlyCollection<Computer> GetComputerList()
+        {
+
+            return CompList.AsReadOnly();
+
+        }
+        public static void AddMemberToList(Computer member)
+        {
+            CompList.Add(member);
         }
     }
 }

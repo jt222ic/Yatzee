@@ -226,7 +226,7 @@ namespace Yatzee.Model
         }
         public int Bonus()
         {
-            if(BonusSum>10)
+            if(BonusSum>75)
             {
                 BonusPoint = 50;
                 TotalScore += BonusPoint;

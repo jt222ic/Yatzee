@@ -20,6 +20,7 @@ namespace Yatzee.Controller
         bool RerollView = false;
         int Tossthree = 0;
         int dicenumber;
+        public bool playerDone;
         public User()
         {
             roll = new Dice();
@@ -64,6 +65,13 @@ namespace Yatzee.Controller
                         break;
                     case 6:
                         show.DisplayScore(DAL.getMemberList());
+                        break;
+                    case 7:
+                        playerDone = true;
+                        Ai.TestingAI(playerDone);
+                        break;
+                    case 8:
+                        show.AiList(DAL.GetComputerList(),Ai);
                         break;
                 }
             }
@@ -196,8 +204,6 @@ namespace Yatzee.Controller
                PlayerValue = 5;
                player.GetFive = Rules.AddUpDice(ListaAvRoll, PlayerValue);  // works
                Console.WriteLine("Mark on 5");
-               
-               
                
                break;
                 case 6:
