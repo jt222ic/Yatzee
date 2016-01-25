@@ -108,7 +108,7 @@ namespace Yatzee.Controller
                             return;
                         case 1:
                             dicenumber = 0;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);  // WORKS
+                            roll.ReRoll(dicenumber, ListaAvRoll, player);
                             continue;
                         case 2:
                             dicenumber = 1;
@@ -168,25 +168,25 @@ namespace Yatzee.Controller
                case 1:
                PlayerValue = 1;
                Console.WriteLine("Mark on 1");
-               //player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
-               player.GetOne = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+               
               
                break;
                 case 2:
                PlayerValue = 2;
                Console.WriteLine("Mark on 2");
-               player.GetTwo = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
                
               
                break;
                 case 3:
                PlayerValue = 3;
-               player.GetThree = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
                Console.WriteLine("Mark on 3");
                break;
                 case 4:
                PlayerValue = 4;
-               player.GetFour = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
                Console.WriteLine("Mark on 4");
               
                
@@ -194,7 +194,7 @@ namespace Yatzee.Controller
                break;
                 case 5:
                PlayerValue = 5;
-               player.GetFive = Rules.AddUpDice(ListaAvRoll, PlayerValue);  // works
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
                Console.WriteLine("Mark on 5");
                
                
@@ -202,25 +202,27 @@ namespace Yatzee.Controller
                break;
                 case 6:
                PlayerValue = 6;
-               player.GetSix = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+               player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
 
-               player.GetChance = Rules.Chance(ListaAvRoll);     //works
+               player.GetChance = Rules.Chance(ListaAvRoll);
                Console.WriteLine("Mark on 6");
             
                
                break;
                 case 7:
-               LowerSection();
+               player.GetThreeOfAKind = Rules.ThreeOfAKind(ListaAvRoll);
+               Console.WriteLine("Three of a Kind");   // work
+               Rules.ThreeOfAKind(ListaAvRoll);
                
                break;
 
                 case 8:
-               Console.WriteLine("Large Straight");   // works
+               Console.WriteLine("Large Straight");   // work
                player.GetLargeStraight =Rules.LargeStraight(ListaAvRoll);
                break;
 
                 case 9:
-               Console.WriteLine("FULL HOUSE");   // works
+               Console.WriteLine("FULL HOUSE");   // work
                player.GetFullHouse = Rules.FullHouse(ListaAvRoll);
                break;
             }
@@ -229,68 +231,6 @@ namespace Yatzee.Controller
             while
             (Console.ReadKey(true).Key != ConsoleKey.Escape);
 
-        }
-        public void LowerSection()
-        {  
-            
-            //show.DisplayScore(DAL.getMemberList());
-           
-            do
-            {
-                string lowerchoices = System.Console.ReadLine();
-
-                int LowerChoice = int.Parse(lowerchoices);
-                perforReRoll = false;
-                player.GetTotalScore = Rules.TotalScore;
-                player.GetBonus = Rules.Bonus();
-
-                switch (LowerChoice)
-                {
-                    case 0:
-                        return;
-                    case 1: 
-
-                       player.GetThreeOfAKind = Rules.ThreeOfAKind(ListaAvRoll);
-                      Console.WriteLine("Three of a Kind");   // works
-                      //Rules.ThreeOfAKind(ListaAvRoll);
-                      break;
-
-                    case 2:
-                      player.GetFourOfAKind = Rules.FourOfAKind(ListaAvRoll);  //works
-                      Console.WriteLine("Four of a Kind");
-                      //Rules.FourOfAKind(ListaAvRoll);
-                      break;
-
-                    case 3:
-                      player.GetFullHouse = Rules.FullHouse(ListaAvRoll); // works
-                        Console.WriteLine("FULL HOUSE");
-                        break;
-
-                    case 4:
-                        player.GetSmallStraight = Rules.SmallStraight(ListaAvRoll); // works
-                        Console.WriteLine("SMALL straight");
-                        break;
-                    case 5:
-                        player.GetLargeStraight = Rules.LargeStraight(ListaAvRoll);  // works
-                        Console.WriteLine("LARGESTRAIGHT");
-                        break;
-
-                    case 6:
-                        player.GetChance = Rules.Chance(ListaAvRoll); // works
-                        Console.WriteLine("Chance!");
-                        break;
-
-                    case 7:
-                        player.GetYatzee = Rules.Yatzee(ListaAvRoll); // works
-                        Console.WriteLine("YATZEEE");
-                        break;
-
-                    default:
-                        return;
-                }
-            }
-            while
-            (Console.ReadKey(true).Key != ConsoleKey.Escape);
         }
     }
 }

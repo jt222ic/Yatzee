@@ -9,6 +9,7 @@ namespace Yatzee.Model
     class DiceRule
     {
 
+        
       public List<int> Testingphase;
        public int Sum = 0;
        public int TotalScore = 0;
@@ -92,34 +93,6 @@ namespace Yatzee.Model
                     Sum += Dice[k];
                 }
                 Console.WriteLine("Four of a kind : {0}", Sum);
-            }
-            return Sum;
-        }
-        public int Yatzee(List<int> Dice)
-        {
-            Sum = 0;
-            bool Yatzee = false;
-
-            for (int i = 1; i <= 6; i++)
-            {
-                int Count = 0;
-                for (int j = 0; j < 5; j++)
-                {
-                    if (Dice[j] == i)
-                    {
-                        Count++;
-
-                    }
-                    if (Count > 4)
-                    {
-                        Console.WriteLine("YATZEEAAAAAAAAAAAAAAAAAAAAAA");
-                        Yatzee = true;
-                    }
-                }
-            }
-            if (Yatzee)
-            {
-                Sum = 50;
             }
             return Sum;
         }
@@ -236,10 +209,24 @@ namespace Yatzee.Model
 
         public int Chance(List<int> ListOfDice)
         {
-           Sum = 0;
-          Sum += ListOfDice.Sum();
-          Console.WriteLine("CHANCE : {0}", Sum);
+            Sum = 0;
+
+            int[] ChanceArray = new int[5];
+            for (int i = 0; i < ListOfDice.Count; i++)
+            {
+                ChanceArray[0] = ListOfDice[0];
+                ChanceArray[1] = ListOfDice[1];
+                ChanceArray[2] = ListOfDice[2];
+                ChanceArray[3] = ListOfDice[3];
+                ChanceArray[4] = ListOfDice[4];
+            }
+
+            
+
+
             return Sum;
         }
+
+
     }
 }

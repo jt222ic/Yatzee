@@ -34,6 +34,7 @@ namespace Yatzee.View
             System.Console.WriteLine("3. Re-Roll");
             System.Console.WriteLine("4. Register");
             System.Console.WriteLine("5. CompactList: Name,TotalScore, Date");
+            System.Console.WriteLine("6. FullList: Date, and FullScoring");
            
          
 
@@ -84,53 +85,55 @@ namespace Yatzee.View
         {
             foreach (Model.Player member in list)
             {
+            System.Console.WriteLine("                                     ");
+            System.Console.WriteLine("                                     ");
+            System.Console.WriteLine("                                     ");
+            System.Console.WriteLine("                                     ");
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("        ****Yatzee****||   You     ||");
+            System.Console.WriteLine(" ****Yatzee****||{0}               ||",member.GetName);
             System.Console.WriteLine("=====================================");
             System.Console.WriteLine("============UpperSection=============");
             System.Console.WriteLine("=====================================");
-
-            System.Console.WriteLine("         Ones         || {0}           ||", member.GetAddup);
+            System.Console.WriteLine("         Ones         ||{0}       ||",member.GetOne);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Twos         ||           ||");
+            System.Console.WriteLine("         Twos         ||{0}       ||", member.GetTwo);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Threes       ||           ||");
+            System.Console.WriteLine("         Threes       ||{0}       ||", member.GetThree);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Fours        ||           ||");
+            System.Console.WriteLine("         Fours        ||{0}       ||",member.GetFour);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Sixes        ||           ||");
+            System.Console.WriteLine("         Five         ||{0}       ||", member.GetFive);
+            System.Console.WriteLine("=====================================");
+            System.Console.WriteLine("         Sixes        ||{0}       ||", member.GetSix);
             System.Console.WriteLine("=====================================");
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Sum          ||           ||");
+            System.Console.WriteLine("         Sum          ||          ||");
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("         Bonus        ||           ||");
+            System.Console.WriteLine("         Bonus        ||{0}       ||",member.GetBonus);
             System.Console.WriteLine("=====================================");
             System.Console.WriteLine("============LowerSection=============");
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Three of a Kind       ||           ||");
+            System.Console.WriteLine("Three of a Kind       ||{0}          ||",member.GetThreeOfAKind);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Four of a Kind        ||           ||");
+            System.Console.WriteLine("Four of a Kind        ||{0}          ||", member.GetFourOfAKind); 
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Full House            ||           ||");
+            System.Console.WriteLine("Full House            ||{0}          ||",member.GetFullHouse);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Small Straight        ||           ||");
+            System.Console.WriteLine("Small Straight        ||{0}          ||" ,member.GetSmallStraight);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Large Straight        ||           ||");
+            System.Console.WriteLine("Large Straight        ||{0}          ||",member.GetLargeStraight);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("Chance                ||           ||");
+            System.Console.WriteLine("Chance                ||{0}          ||",member.GetChance);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("YAHTZEE               ||           ||");
+            System.Console.WriteLine("YAHTZEE               ||{0}          ||",member.GetYatzee);
             System.Console.WriteLine("=====================================");
-            System.Console.WriteLine("TOTALSCORE            ||           ||");
+            System.Console.WriteLine("TOTALSCORE            ||{0}          ||",member.GetTotalScore);
             }
-            
-          
         }
 
         public void Register()
         {
             System.Console.Clear();
-
             System.Console.WriteLine("======================================================");
             System.Console.WriteLine("Press 0 to return to ");
             System.Console.WriteLine("1. Register Player");
