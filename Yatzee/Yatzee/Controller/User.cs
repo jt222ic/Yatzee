@@ -34,14 +34,9 @@ namespace Yatzee.Controller
         public Player chPlayer1()
         {
 
-            return player;
+            return  player;
         }
 
-        public Player chPlayer2()
-        {
-
-            return player;
-        }
        
 
         public void MainMenu()
@@ -106,8 +101,6 @@ namespace Yatzee.Controller
                 case 1:
                    //ListaAvRoll = new List<int>();
                   PlayerList.Add(player = new Player(show.ReturnInfo(), ListaAvRoll));
-
-                    
                     break;
                 case 2:
                     Ai = new Computer();
@@ -123,6 +116,7 @@ namespace Yatzee.Controller
 
         public void ChangePlayer()
         {
+            
             ListOfPlayers = DAL.getMemberList();
             show.CompactList(ListOfPlayers);
             int choice = int.Parse(Console.ReadLine());
@@ -131,7 +125,8 @@ namespace Yatzee.Controller
                 return;
             }
             choice--;
-            Player player = PlayerList.ElementAt(choice);
+            player = PlayerList.ElementAt(choice);
+
         }
 
         public void ChoiceOfReRoll(ViewStatus show)
@@ -266,7 +261,7 @@ namespace Yatzee.Controller
 
                 int LowerChoice = int.Parse(lowerchoices);
                 perforReRoll = false;
-                player.GetTotalScore = Rules.TotalScore;
+                //player.GetTotalScore = Rules.TotalScore;
                 player.GetBonus = Rules.Bonus();
 
                 switch (LowerChoice)

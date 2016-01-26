@@ -108,7 +108,6 @@ namespace Yatzee.Model
                     if (Dice[j] == i)
                     {
                         Count++;
-
                     }
                     if (Count > 4)
                     {

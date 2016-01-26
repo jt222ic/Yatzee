@@ -158,7 +158,7 @@ namespace Yatzee.View
             Console.WriteLine("Player: ");
             foreach (Model.Player member in list)
             {
-                System.Console.WriteLine("Name :{0}, Date {1}, AddupScore : {2}  MemberID : {3} ",
+                System.Console.WriteLine("Name :{0}, Date {1}, TotalScore : {2}  MemberID : {3} ",
 
                 member.GetName, member.date, member.GetTotalScore,i++);
             }
