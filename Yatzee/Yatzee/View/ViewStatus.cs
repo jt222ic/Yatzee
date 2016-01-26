@@ -9,6 +9,7 @@ namespace Yatzee.View
 {
     class ViewStatus
     {
+         
         public void DisplayFirstPage(bool Reroll)
         {
             System.Console.Clear();
@@ -140,6 +141,7 @@ namespace Yatzee.View
             System.Console.WriteLine("Press 0 to return to ");
             System.Console.WriteLine("1. Register Player");
             System.Console.WriteLine("2  Register Comp");
+            System.Console.WriteLine("3  Change Player");
             System.Console.WriteLine("======================================================");
         }
 
@@ -152,15 +154,13 @@ namespace Yatzee.View
 
         public void CompactList(IReadOnlyCollection<Player> list)  // spara in listan först
         {
-
+            int i = 1;
             Console.WriteLine("Player: ");
             foreach (Model.Player member in list)
             {
-                System.Console.WriteLine("Name :{0}, Date {1}, AddupScore : {2} ",
+                System.Console.WriteLine("Name :{0}, Date {1}, AddupScore : {2}  MemberID : {3} ",
 
-                member.GetName, member.date, member.GetTotalScore);
-
-
+                member.GetName, member.date, member.GetTotalScore,i++);
             }
         }
 

@@ -12,10 +12,12 @@ namespace Yatzee.Controller
     {
         ViewStatus show;
         Player player;
+        List<Player> PlayerList = new List<Player>();
         Dice roll;
         Computer Ai;
         DiceRule Rules;
         List<int> ListaAvRoll;
+        IReadOnlyCollection<Player> ListOfPlayers;
         bool perforReRoll = false;
         bool RerollView = false;
         int Tossthree = 0;
@@ -25,9 +27,22 @@ namespace Yatzee.Controller
         {
             roll = new Dice();
             Rules = new DiceRule();
-            player = new Player("Human", ListaAvRoll);
+           PlayerList.Add(player = new Player("Human", ListaAvRoll));
             show = new ViewStatus();
         }
+
+        public Player chPlayer1()
+        {
+
+            return player;
+        }
+
+        public Player chPlayer2()
+        {
+
+            return player;
+        }
+       
 
         public void MainMenu()
         {
@@ -90,14 +105,33 @@ namespace Yatzee.Controller
                    return;
                 case 1:
                    //ListaAvRoll = new List<int>();
-                   player = new Player(show.ReturnInfo(), ListaAvRoll);
+                  PlayerList.Add(player = new Player(show.ReturnInfo(), ListaAvRoll));
+
+                    
                     break;
                 case 2:
                     Ai = new Computer();
                     break;
+
+                case 3:
+                    ChangePlayer();
+                    break;
             }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
+        }
+
+        public void ChangePlayer()
+        {
+            ListOfPlayers = DAL.getMemberList();
+            show.CompactList(ListOfPlayers);
+            int choice = int.Parse(Console.ReadLine());
+            if (choice == 0)
+            {
+                return;
+            }
+            choice--;
+            Player player = PlayerList.ElementAt(choice);
         }
 
         public void ChoiceOfReRoll(ViewStatus show)
@@ -151,7 +185,6 @@ namespace Yatzee.Controller
                 }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
-
         }
         public void FillTheGap()
         {
@@ -171,14 +204,14 @@ namespace Yatzee.Controller
             switch(RuleChoice)
             {
 
-                case 0:
+               case 0:
                     return;
                case 1:
                PlayerValue = 1;
                Console.WriteLine("Mark on 1");
                //player.GetAddup = Rules.AddUpDice(ListaAvRoll, PlayerValue);
                player.GetOne = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-              
+             
                break;
                 case 2:
                PlayerValue = 2;
@@ -195,7 +228,7 @@ namespace Yatzee.Controller
                 case 4:
                PlayerValue = 4;
                player.GetFour = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-               Console.WriteLine("Mark on 4");
+               
               
                
               
@@ -209,25 +242,11 @@ namespace Yatzee.Controller
                 case 6:
                PlayerValue = 6;
                player.GetSix = Rules.AddUpDice(ListaAvRoll, PlayerValue);
-
-               player.GetChance = Rules.Chance(ListaAvRoll);     //works
                Console.WriteLine("Mark on 6");
             
-               
                break;
                 case 7:
                LowerSection();
-               
-               break;
-
-                case 8:
-               Console.WriteLine("Large Straight");   // works
-               player.GetLargeStraight =Rules.LargeStraight(ListaAvRoll);
-               break;
-
-                case 9:
-               Console.WriteLine("FULL HOUSE");   // works
-               player.GetFullHouse = Rules.FullHouse(ListaAvRoll);
                break;
             }
 

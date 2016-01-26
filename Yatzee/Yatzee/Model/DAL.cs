@@ -42,7 +42,7 @@ namespace Yatzee.Model
             return CompList.AsReadOnly();
 
         }
-        public static void AddMemberToList(Computer member)
+        public static void AddCompList(Computer member)
         {
             CompList.Add(member);
         }

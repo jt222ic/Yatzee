@@ -224,6 +224,7 @@ namespace Yatzee.Model
                 Datum = value;
             }
         }
+     
         public Player(string name,List<int>roll)
         {
             test = roll;

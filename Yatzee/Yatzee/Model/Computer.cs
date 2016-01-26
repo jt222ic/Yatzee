@@ -22,9 +22,9 @@ namespace Yatzee.Model
             AiRule = new DiceRule();
             sendToMemberList(this);
         }
-        public void sendToMemberList(Computer member)
+        public void sendToMemberList(Computer comber)
         {
-            DAL.AddMemberToList(member);
+            DAL.AddCompList(comber);
         }
         public int GetTotalSum
         {
