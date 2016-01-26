@@ -96,7 +96,6 @@ namespace Yatzee.Model
         }
         public int GetYatzee
         {
-
             get
             {
                 return Yatzee;

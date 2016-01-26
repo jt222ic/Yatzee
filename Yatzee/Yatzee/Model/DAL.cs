@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 namespace Yatzee.Model
 {
     [Serializable]
-    class DAL
+    static class DAL
     {
-        private static readonly string _FILE_PATH = "Listan.bin";      //refrens https://www.youtube.com/watch?v=URw86vBWeGE
+        private static readonly string _FILE_PATH = "infoLista.bin";      //refrens https://www.youtube.com/watch?v=URw86vBWeGE
 
         private static List<Player> memberList = new List<Player>();
-        private static List<Computer> CompList = new List<Computer>();
+        //private static List<Computer> CompList = new List<Computer>();
 
         public static void SaveToFile()                                                 // referens för användning av Serialized 
         {
@@ -22,7 +22,7 @@ namespace Yatzee.Model
             {
                 BinaryFormatter binFormatter = new BinaryFormatter();
                 binFormatter.Serialize(fileStream, memberList);
-                fileStream.Close();
+                
             }
         }
         public static void AddMemberToList(Player member)
@@ -32,19 +32,17 @@ namespace Yatzee.Model
 
         public static IReadOnlyCollection<Player> getMemberList()
         {
-
             return memberList.AsReadOnly();
-
         }
-        public static IReadOnlyCollection<Computer> GetComputerList()
-        {
+        //public static IReadOnlyCollection<Computer> GetComputerList()
+        //{
 
-            return CompList.AsReadOnly();
+        //    return CompList.AsReadOnly();
 
-        }
-        public static void AddCompList(Computer member)
-        {
-            CompList.Add(member);
-        }
+        //}
+        //public static void AddCompList(Computer member)
+        //{
+        //    CompList.Add(member);
+        //}
     }
 }

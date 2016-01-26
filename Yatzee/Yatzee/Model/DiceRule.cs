@@ -232,7 +232,6 @@ namespace Yatzee.Model
             }
             return BonusPoint;
         }
-
         public int Chance(List<int> ListOfDice)
         {
            Sum = 0;

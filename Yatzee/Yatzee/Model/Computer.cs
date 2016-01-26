@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Yatzee.Model
 {
-    class Computer : DAL
+    class Computer 
     {
 
         Dice AiDice;
@@ -20,12 +20,12 @@ namespace Yatzee.Model
         {
             AiDice = new Dice();
             AiRule = new DiceRule();
-            sendToMemberList(this);
+            //sendToMemberList(this);
         }
-        public void sendToMemberList(Computer comber)
-        {
-            DAL.AddCompList(comber);
-        }
+        //public void sendToMemberList(Computer comber)
+        //{
+        //    DAL.AddCompList(comber);
+        //}
         public int GetTotalSum
         {
             get

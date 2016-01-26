@@ -38,9 +38,6 @@ namespace Yatzee.View
             System.Console.WriteLine("6. FullList: Date, and FullScoring");
             System.Console.WriteLine("7. Player is Done, Computers turn || Require to create an CPU");
             System.Console.WriteLine("8. Score for comp");
-
-
-
             //if (Reroll)
             //{
             //    System.Console.Clear();
@@ -66,7 +63,6 @@ namespace Yatzee.View
                 System.Console.WriteLine("YOU HAVE USED ALL YOUR CHANCE");
             }
         }
-
         public void DisplayRoll(List<int> ListaOverDice, bool Diceroll)
         {
             Console.Clear();
@@ -76,7 +72,6 @@ namespace Yatzee.View
             }
             if (Diceroll)
             {
-
                 System.Console.WriteLine("======================================================");
                 System.Console.WriteLine("Press 1- 5 to switch each Dices and press Enter");
                 System.Console.WriteLine("Press 6 for first re-roll");
@@ -144,7 +139,6 @@ namespace Yatzee.View
             System.Console.WriteLine("3  Change Player");
             System.Console.WriteLine("======================================================");
         }
-
         public string ReturnInfo()
         {
             System.Console.Clear();
@@ -159,19 +153,15 @@ namespace Yatzee.View
             foreach (Model.Player member in list)
             {
                 System.Console.WriteLine("Name :{0}, Date {1}, TotalScore : {2}  MemberID : {3} ",
-
                 member.GetName, member.date, member.GetTotalScore,i++);
             }
         }
-
         public void AiList(IReadOnlyCollection<Computer> list, Computer CompDice)  // spara in listan först
         {
-            
             Console.WriteLine("Computer: ");
             foreach (Model.Computer computer in list)
             {
                 System.Console.WriteLine("{0}",computer.GetTotalSum) ;
-
             }
             foreach (int AndroidDice in CompDice.AiRoll)
             {
