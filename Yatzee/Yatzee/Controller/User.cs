@@ -23,6 +23,7 @@ namespace Yatzee.Controller
         int Tossthree = 0;
         int dicenumber;
         public bool playerDone;
+        int choice;
         public User()
         {
             roll = new Dice();
@@ -73,6 +74,9 @@ namespace Yatzee.Controller
                         break;
                     case 8:
                         //show.AiList(DAL.GetComputerList(),Ai);
+
+                    case 9:
+                        DAL.Initialize();
                         break;
                 }
             }
@@ -98,9 +102,26 @@ namespace Yatzee.Controller
                 case 3:
                     ChangePlayer();
                     break;
+                case 4:
+                    RemovePlayer();
+                    break;
             }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
+        }
+
+        public void RemovePlayer()
+        {
+            ListOfPlayers = DAL.getMemberList();
+            show.CompactList(ListOfPlayers);
+            choice = int.Parse(Console.ReadLine());
+            if (choice == 0)
+            {
+                return;
+            }
+            choice--;
+            player = ListOfPlayers.ElementAt(choice);
+            DAL.removeMember(choice);
         }
 
         public void ChangePlayer()
@@ -108,7 +129,7 @@ namespace Yatzee.Controller
             
             ListOfPlayers = DAL.getMemberList();
             show.CompactList(ListOfPlayers);
-            int choice = int.Parse(Console.ReadLine());
+           choice = int.Parse(Console.ReadLine());
             if (choice == 0)
             {
                 return;

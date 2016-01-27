@@ -25,6 +25,10 @@ namespace Yatzee.Model
                 
             }
         }
+        public static void removeMember(int choice)
+        {
+            memberList.RemoveAt(choice);
+        }
         public static void AddMemberToList(Player member)
         {
             memberList.Add(member);
@@ -33,6 +37,34 @@ namespace Yatzee.Model
         public static IReadOnlyCollection<Player> getMemberList()
         {
             return memberList.AsReadOnly();
+        }
+
+        public static void Initialize()
+        {
+            memberList = LoadFromFile();
+        }
+
+        public static List<Player> LoadFromFile()
+        {
+            FileStream fileStream = null;
+            List<Player> loadedList = null;
+
+            FileStream file = new FileStream(_FILE_PATH, FileMode.OpenOrCreate, FileAccess.Read);
+
+            BinaryFormatter binFormatter = new BinaryFormatter();
+            try
+            {
+                loadedList = (List<Player>)binFormatter.Deserialize(file);
+            }
+            catch (Exception e)
+            {
+                Console.Write("Error occurred while deserializing {0}", _FILE_PATH);
+                loadedList = new List<Player>();
+            }
+            file.Close();
+
+            return loadedList;
+
         }
         //public static IReadOnlyCollection<Computer> GetComputerList()
         //{

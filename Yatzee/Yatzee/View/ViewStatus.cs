@@ -135,8 +135,9 @@ namespace Yatzee.View
             System.Console.WriteLine("======================================================");
             System.Console.WriteLine("Press 0 to return to ");
             System.Console.WriteLine("1. Register Player");
-            System.Console.WriteLine("2  Register Comp");
-            System.Console.WriteLine("3  Change Player");
+            System.Console.WriteLine("2.  Register Comp");
+            System.Console.WriteLine("3.  Change Player");
+            System.Console.WriteLine("4.  Remove Player");
             System.Console.WriteLine("======================================================");
         }
         public string ReturnInfo()
