@@ -228,7 +228,7 @@ namespace Yatzee.Model
         {
             test = roll;
             Name = name;
-            Dice sliceNDice = new Dice();
+            //Dice sliceNDice = new Dice();
             Rules = new DiceRule();
             Datum = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
             

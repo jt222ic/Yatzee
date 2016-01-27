@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-01-27T19:14:31" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '2f285c29-0fa2-4046-99d2-f2af18d83547' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '4284c3ff-4b61-4be5-9e80-b644a861ed83' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System' -  (Package)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic::IReadOnlyCollection' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic::IReadOnlyCollection&lt;Player‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic::List&lt;Int32‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Collections::Generic::List&lt;Player‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::DateTime' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::System::Random' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee' -  (Package)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model' -  (Package)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer' -  (Class)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::AiDice' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::AiRoll' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::AiRule' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::Computer' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::GetTotalSum' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::k' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::random' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::Sum' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::TestingAI' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::TestingAI::playerdone' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Computer::u' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL' -  (Class)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::_FILE_PATH' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::AddMemberToList' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::AddMemberToList::member' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::getMemberList' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::Initialize' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::LoadFromFile' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::memberList' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::removeMember' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::removeMember::choice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DAL::SaveToFile' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice' -  (Class)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::Dice' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::i' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::newDices' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::random' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::ReRoll' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::ReRoll::OldDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::ReRoll::Prayer' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::ReRoll::whichdice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::Roll' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::RollNumber' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Dice::unique' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule' -  (Class)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::AddUpDice' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::AddUpDice::ListOfDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::AddUpDice::PlayerSelectValues' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Bonus' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::BonusPoint' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::BonusSum' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Chance' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Chance::ListOfDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::DiceRule' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::FourOfAKind' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::FourOfAKind::Dice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::FullHouse' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::FullHouse::ListOfDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::LargeStraight' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::LargeStraight::ListOfDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::playerValue' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::SmallStraight' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::SmallStraight::ListOfDice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Sum' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Testingphase' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::ThreeOfAKind' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::ThreeOfAKind::Dice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::TotalScore' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Yatzee' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::DiceRule::Yatzee::Dice' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Medium" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player' -  (Class)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Addup' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::BonusScore' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::chance' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::date' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Datum' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::FourOfAKind' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::FullHouse' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetAddup' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetBonus' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetChance' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetFive' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetFour' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetFourOfAKind' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetFullHouse' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetLargeStraight' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetName' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetOne' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetSix' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetSmallStraight' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetThree' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetThreeOfAKind' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetTotalScore' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetTwo' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::GetYatzee' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::HoldState' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::LargeStraight' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::m_bHoldState' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Name' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberFive' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberFour' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberOne' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberSix' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberThree' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::NumberTwo' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Player' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Player::name' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Player::roll' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Rules' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::sendToMemberList' -  (Operation)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::sendToMemberList::member' -  (Parameter)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::SmallStraight' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::test' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::ThreeOfAKind' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::TOTALSCORE' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UMLYatzee::Yatzee::Model::Player::Yatzee' -  (Property)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UMLYatzee::Yatzee::Model::Player to UMLYatzee::System::DateTime (Association)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UMLYatzee::System::Collections::Generic::List&lt;Player‎&gt; to UMLYatzee::System::Collections::Generic::IReadOnlyCollection&lt;Player‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="High" Text="(5) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-01-27T19:14:35" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

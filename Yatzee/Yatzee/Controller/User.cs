@@ -31,10 +31,12 @@ namespace Yatzee.Controller
             PlayerList.Add(player = new Player("Human", ListaAvRoll));
             show = new ViewStatus();
         }
+
+     
+    
         public void MainMenu()
         {
             do {
-
                 show.DisplayFirstPage(perforReRoll);
                 string choices = System.Console.ReadLine();
                 int Choice = int.Parse(choices);
@@ -57,7 +59,6 @@ namespace Yatzee.Controller
                         
                     case 3:
                         ChoiceOfReRoll(show);
-
                         break;  
                     case 4:
                         Register();

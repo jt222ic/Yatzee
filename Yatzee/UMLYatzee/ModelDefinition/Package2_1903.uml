@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6e9e21f1-0029-4cd8-85bc-9dbdbaad1f27"
+  name="View"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="cf8715ef-3415-49e1-90de-ee99b18c482f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DYatzee.View"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="6da3457b-4850-4db8-a403-10b6021cd4fc">
+      <profileInstance
+        Id="02e5c475-eb12-4443-b532-822016936c10"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="405ab489-6193-461a-b882-d719c78ece22"
+        name="ViewStatus"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b032aa46-bd02-4e68-a0eb-2b85ce2d432f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="aa1f1525-73e0-44e0-884e-f23f4256bcda"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="924a3290-ee18-4e5b-8561-a306934af594">
+                <propertyInstance
+                  Id="588e49b3-d153-4f11-a5f4-f58929732c22"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="489742fb-2228-4239-ab8f-12757646ecf6">
+                <propertyInstance
+                  Id="59a963aa-9bb9-4580-8a9d-f73e0518ae0b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="efbe7e66-dc74-44f6-b49b-8a7f60491252">
+                <propertyInstance
+                  Id="d7db94c5-9141-4306-acbb-4bb7832e3059"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="095171ca-052a-48e7-b459-f9eadcf0622c">
+                <propertyInstance
+                  Id="086c7ba4-2ff3-4bb2-bbb7-3e99b569c024"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b5747c08-72c9-4558-a143-278499dea6ae">
+                <propertyInstance
+                  Id="8a2ddcab-ebef-4b28-a212-2398c068f9ff"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="443598fb-b05e-4c9d-9dd3-1f7bf03f2aef">
+            <classMoniker
+              Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
+              LastKnownName="Player"
+              LastKnownLocation="Package3_1903.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="449dda81-5751-47c6-a5ce-a7c5f8d79d57"
+            name="DisplayFirstPage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5d36d304-d7f1-4452-bf60-8fd040291ff1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayFirstPage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e206ba0d-ec85-495d-a320-8c28f8c9a1ce"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7869d186-a53f-4e4f-987b-41159f9d94a9">
+                    <propertyInstance
+                      Id="b88e4945-987e-4247-afa8-3700c910f403"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="650fb3a3-1176-4a3f-a119-b0fecd006c57">
+                    <propertyInstance
+                      Id="c981aa31-989a-48d9-a1d6-6287531e1057"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbd80ae4-75de-4e45-b96a-a871212969fa">
+                    <propertyInstance
+                      Id="f11cc6bc-bf90-4a91-8e00-c8451fb4922b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cfed535-3f9a-4eef-a90a-1f4d984530f4">
+                    <propertyInstance
+                      Id="761f1cf6-b468-4f82-8393-542791ae74e2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12e5f861-1eab-4388-b2a7-f00c739a91dd">
+                    <propertyInstance
+                      Id="4b3a537e-207c-4e7c-b453-b789fae1a0ec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09d90239-a026-49b9-bc76-11e09e252800">
+                    <propertyInstance
+                      Id="4265a07e-42a4-4262-bda9-679a179193fb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ca177f9-9260-4756-9c6d-62750b682b90"
+                  name="Reroll"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="23a26cfc-eff9-42f0-8492-46d7d8e0c96e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayFirstPage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DReroll"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UMLYatzee.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="da686ba4-3ffc-49a9-9f27-b48a6dc858a6"
+            name="showDiceAlternative"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="29daef13-4696-4ce9-867e-fb3c8798c83a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DshowDiceAlternative OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="54b40fcc-2401-40e2-8bd9-110c2c047dc8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e1d7131-f58d-4025-abf7-1dc7424c99e6">
+                    <propertyInstance
+                      Id="a76788a7-5f72-4849-8d8d-dd7360753334"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e9453d6-6c5a-4e3b-9767-de71e1fbe4cf">
+                    <propertyInstance
+                      Id="6fa7333f-b5ea-427f-af1f-c19547d1c3bd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd15a87-7334-456a-ad08-54b61eb042e1">
+                    <propertyInstance
+                      Id="307956d1-c242-4655-88cd-c78a12fc08fa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="890e8863-7fa2-4f31-b953-41e582f89bcb">
+                    <propertyInstance
+                      Id="8d30c484-f6dc-44ed-833f-165c003e4bce"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66e5811a-4417-41d4-bc30-788918983f87">
+                    <propertyInstance
+                      Id="5f221d83-5eda-42b1-9fc3-1da066992f10"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc764d86-32a5-4881-839f-83157a96026d">
+                    <propertyInstance
+                      Id="4919a12d-a5e8-4933-9ca0-8918c12542ef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3afba63f-68da-4959-9131-77470e496ca8"
+                  name="hold"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="747cde72-b7c5-41b6-8db3-34de973b2273"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DshowDiceAlternative OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Dhold"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UMLYatzee.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fef5f251-1cb2-43f2-9de8-1572f30d7cdc"
+            name="Register"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2db919d4-eff6-480f-a68c-4d9350eea7e8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3DRegister"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="eccce9ac-9f63-4419-8343-1ee9c8eee6d9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d021177e-ffec-40c5-af4b-db020466d084">
+                    <propertyInstance
+                      Id="dd347d2d-f05c-4518-b829-aabcdd772fe3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f55826e4-cfaf-4657-9fd9-fe1d29fbdb76">
+                    <propertyInstance
+                      Id="7b5b5bed-34a4-4ab5-a560-374c973950bf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06ed7d78-ed1c-42dd-8496-301f99fec244">
+                    <propertyInstance
+                      Id="ee0f1c43-aa49-4f4b-b0d5-b4aeb5cca53a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44bb587a-9695-4ed1-b172-aef9e9fe360c">
+                    <propertyInstance
+                      Id="a9327adb-9419-4311-ba04-bf2a766041bc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1321b314-0eed-432d-84c4-03de3e5e0a17">
+                    <propertyInstance
+                      Id="64fef6d5-f0e0-4494-a2c0-652f7061655f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f96fa794-ee2d-4a56-8e20-633413b73126">
+                    <propertyInstance
+                      Id="e63893d7-9e77-47e3-b155-4d7bc93d6ca8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4aa6ad0c-0928-4719-858f-59d4a4e721ea"
+            name="ReturnInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="df00755f-1299-42c4-b4ca-0c0962d967d3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3DReturnInfo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3e73093c-fdba-4497-a670-56f32af66653"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27af91f3-8d27-44c1-909d-e18409053c2a">
+                    <propertyInstance
+                      Id="cde12f78-c8b4-46fe-a4de-bed9e1f4b2bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dd3a945-36c1-4ecc-8f71-a2cf26a0ef42">
+                    <propertyInstance
+                      Id="c25c93be-575d-4491-9fa0-4790a327ff8c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8035f316-2bba-4c69-be80-c89eb6c75f7c">
+                    <propertyInstance
+                      Id="d0e2e284-cc3f-475b-b905-99c666498975"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5ed734e-45c7-4e47-865b-5f086ceca880">
+                    <propertyInstance
+                      Id="00866bb8-30c8-4a38-ba95-ded0f0ddacd9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8876683a-452b-4902-98aa-3b4215e720a3">
+                    <propertyInstance
+                      Id="941cf462-8280-467b-9197-8ad25c4d1d5b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9182f79b-5810-4634-a24d-f8d51513412f">
+                    <propertyInstance
+                      Id="d3e97226-c726-4175-8789-b200d9a2a9ff"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5235dc5f-8373-438c-ad25-8d815ee4de38"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="UMLYatzee.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="37fee889-469e-4710-93a5-ead81ceaaf04"
+            name="DisplayRoll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6f59db01-db0e-4122-bb17-05c84c69307a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayRoll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a154335-519c-438b-90e1-e31cea5d2ef7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bde9e869-9fb6-447a-add4-ad4a79572695">
+                    <propertyInstance
+                      Id="df4cc108-92d3-4144-b660-1b384dc79d59"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f666bf31-58dc-4232-9504-8c813ca9ce8b">
+                    <propertyInstance
+                      Id="bb69b58f-8244-4215-8b3a-bc6cb7ec6fb5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0abb0555-7032-43f0-a312-1f1074d65dbe">
+                    <propertyInstance
+                      Id="787646f0-be5e-4852-9f4b-7c12f073bf90"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee801332-e508-4310-8970-88664f9618ef">
+                    <propertyInstance
+                      Id="5613d7b4-c89e-4d28-8c9a-118288fafeb7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="766be1aa-d37e-4d83-8ff9-88db64425565">
+                    <propertyInstance
+                      Id="9cb52137-1612-4af8-9624-6c19318ed376"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="365b3598-dfdf-4df3-9890-8b26c3b6e3c6">
+                    <propertyInstance
+                      Id="990b1495-cd56-442f-b23c-b2fa278233d2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1de7f28a-69f6-4e22-83f9-1d2b174dbb1a"
+                  name="ListaOverDice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a55a57de-e0d4-4889-bd67-a924f06bdc26"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayRoll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DListaOverDice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e2835e4f-9692-49bd-a6e4-866e7bb27022"
+                      LastKnownName="List&lt;Int32‎&gt;"
+                      LastKnownLocation="Package6_1903.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f5a5b12-84f9-4560-b0e1-691b84dc9903"
+                  name="Diceroll"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6b8780c9-93b9-43d6-ba4c-117dc2f6cd7e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayRoll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DDiceroll"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UMLYatzee.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b841a809-2313-4dbd-9320-90ff44591027"
+            name="DisplayScore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f0219fdb-cec7-480e-aacf-f7d5770e87b6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayScore OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DPlayer)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e0529f19-6532-4dad-9132-1dc0767ae45f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e92c423-abdc-49da-bda6-eef3740b8048">
+                    <propertyInstance
+                      Id="22a53dbc-3969-4bd0-b11d-b2cb04daca57"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4428665-0128-41dc-87d6-177219dd7768">
+                    <propertyInstance
+                      Id="af267d98-8857-485c-92d9-3a4d6ae41e80"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ece3f882-037a-4ff3-a359-f1bc0d46f34d">
+                    <propertyInstance
+                      Id="d26fbb49-356f-4328-8fc3-ea8d1cbed4cf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26654188-a29b-4d85-9f58-f3b5539fcf60">
+                    <propertyInstance
+                      Id="544ec8f6-30c5-4886-bc3d-3738e5fcd7b8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d336cd6-7f4a-483c-91ff-66299ee5329b">
+                    <propertyInstance
+                      Id="e1281aa4-ea63-4226-bbfa-b1e806094030"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51fb4920-b908-422a-884c-98a46833d79c">
+                    <propertyInstance
+                      Id="fe083fc2-5ff7-4001-a3b5-988b4ecafa7b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="16d91b00-cd67-4c85-bb89-6cd642ad6ad4"
+                  name="list"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4454035d-6299-445c-a7c2-1f2776459e26"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DDisplayScore OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DPlayer)]))]) ParameterIdentifier%3Dlist"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="2a82b83f-b30a-405d-9d87-02be1a4f6ebc"
+                      LastKnownName="IReadOnlyCollection&lt;Player‎&gt;"
+                      LastKnownLocation="Package6_1903.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6b965cd8-79f1-4086-ae2a-323fdecd22f2"
+            name="CompactList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ed6c647-c9db-41a9-9d00-130a6cec8fee"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DCompactList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DPlayer)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="55f288c8-aff9-4a6a-aae4-66452dc4a42c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4537da2e-fc0f-47de-b5ee-0334acf9acb6">
+                    <propertyInstance
+                      Id="ff63ce8f-9e63-490d-baae-2ff3ddd67425"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="662946d3-85a5-4393-86cb-4ed9bee2faf8">
+                    <propertyInstance
+                      Id="b2a3c951-0e72-40e6-aec5-5de6d34e930f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf0ac227-bf2e-4ef8-a351-6b96165a6ff7">
+                    <propertyInstance
+                      Id="00ea9021-493e-4e8e-9522-148ffe2aa8d5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5134a808-8505-41c1-8c06-d545e6b6c7cd">
+                    <propertyInstance
+                      Id="f6f4bb92-4661-4942-af78-5a27447f5804"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99c0d44c-2e09-49f5-bb02-142705b1206c">
+                    <propertyInstance
+                      Id="b09d793d-cfd8-4b4b-95b6-be54ebd53273"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6caf7140-2cfe-47f6-b38f-ae34865004c6">
+                    <propertyInstance
+                      Id="673493ad-e325-44fa-b81f-252d9f38a398"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dd957b4a-4ed2-4c74-b0a9-ad7c61fdb518"
+                  name="list"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a8d97a32-f862-4230-88e0-75ff3d7f5402"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DCompactList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DPlayer)]))]) ParameterIdentifier%3Dlist"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="2a82b83f-b30a-405d-9d87-02be1a4f6ebc"
+                      LastKnownName="IReadOnlyCollection&lt;Player‎&gt;"
+                      LastKnownLocation="Package6_1903.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1a6b1758-6d5a-4fbb-baac-c3a510cc56fe"
+            name="AiList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="aa991d9e-108a-4445-bfe6-e00d874b6dbe"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DAiList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7d50c390-772a-4a0e-a370-4f29a01dd6dd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8386bcab-476d-4792-bb90-4559f22753f3">
+                    <propertyInstance
+                      Id="b55db192-059c-4487-bdcc-d803e39beabd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fdbaebb-e745-4d06-b2ce-5ac22cd3493d">
+                    <propertyInstance
+                      Id="a3696559-2ac4-4255-818e-7ac613ed96ee"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c81b21a3-a792-4079-8ef6-89f6aed3560c">
+                    <propertyInstance
+                      Id="42094bd8-254d-48a4-8087-455f67127d09"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="193a47fd-f841-45b5-ae65-7cdff6286f49">
+                    <propertyInstance
+                      Id="412ec57e-099b-42c4-92f9-f2478eea84a9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81d8c4bc-49a3-4152-9524-8d2224a7a2c3">
+                    <propertyInstance
+                      Id="75829665-de7d-465d-844b-cd0bab9717f7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9aefb7c-7892-441d-a8c1-1a089e93dc8d">
+                    <propertyInstance
+                      Id="53cc3450-af33-40c9-8fcc-a92de0a7c4ea"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34ea3fab-1bc7-4da5-9438-3858c6d0c3e8"
+                  name="list"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="45e98b76-9444-4943-8e5a-55902d113a9a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DAiList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)]) ParameterIdentifier%3Dlist"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="0bda14c4-7da7-440b-b9d0-f1be58d02f5f"
+                      LastKnownName="IReadOnlyCollection&lt;Computer‎&gt;"
+                      LastKnownLocation="Package6_1903.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0c235c3-79b1-42b7-8cbc-7af3fc010a73"
+                  name="CompDice"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7bb3a468-1873-4f81-9c36-75dd27f62388"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D(Name%3DAiList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIReadOnlyCollection GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Model Type%3DComputer)]) ParameterIdentifier%3DCompDice"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a20b8a6e-f1b5-4662-814f-635bfdb266cc"
+                      LastKnownName="Computer"
+                      LastKnownLocation="Package3_1903.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e3b084c9-b81b-4dd5-a348-6027fc33a56a"
+            name="ViewStatus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="898ad888-82c5-49f3-a20d-0ef5704561c1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="299d4925-9317-401c-a167-f6d476db6651"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94c4edf0-85f5-41b7-bbdd-15cd64d1fdbf">
+                    <propertyInstance
+                      Id="7ce3d43a-0ed5-4611-b003-880a0e501da1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5ac4f73-a3d1-4e53-9561-8f29244dcfba">
+                    <propertyInstance
+                      Id="9ceda406-5698-4eab-b428-d2711597ef92"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12ac974f-0f29-4ac4-88c1-857d7fd3fc62">
+                    <propertyInstance
+                      Id="dc30bd7d-5d11-4e84-9cf5-21d1b05d353b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16fbe7b0-5b38-4e1c-8184-b191df8c6a8f">
+                    <propertyInstance
+                      Id="26ccd453-e3df-4b58-84c8-e803458a5583"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2818dec4-d86d-414a-9e2e-63c7070e05c5">
+                    <propertyInstance
+                      Id="88ee2a1d-6883-4ea6-80f0-757ea75c0847"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddfdfff7-4493-42b5-b17b-51cef5161a61">
+                    <propertyInstance
+                      Id="3727fbe9-c052-4294-9f72-c15edd15b20f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

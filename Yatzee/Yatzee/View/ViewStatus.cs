@@ -38,17 +38,6 @@ namespace Yatzee.View
             System.Console.WriteLine("6. FullList: Date, and FullScoring");
             System.Console.WriteLine("7. Player is Done, Computers turn || Require to create an CPU");
             System.Console.WriteLine("8. Score for comp");
-            //if (Reroll)
-            //{
-            //    System.Console.Clear();
-            //    System.Console.WriteLine("======================================================");
-            //    System.Console.WriteLine("        ****Yatzee****                      ");
-            //    System.Console.WriteLine("==========================================");
-            //    System.Console.WriteLine("1. press to save or quit");
-            //    System.Console.WriteLine("2. Set Points");
-            //    System.Console.WriteLine("3. Re-Roll");
-            //    System.Console.WriteLine("4. Register");
-            //}
         }
         public void showDiceAlternative(bool hold)
         {
@@ -136,7 +125,7 @@ namespace Yatzee.View
             System.Console.WriteLine("Press 0 to return to ");
             System.Console.WriteLine("1. Register Player");
             System.Console.WriteLine("2.  Register Comp");
-            System.Console.WriteLine("3.  Change Player");
+            System.Console.WriteLine("3.  Switch Player");
             System.Console.WriteLine("4.  Remove Player");
             System.Console.WriteLine("======================================================");
         }
