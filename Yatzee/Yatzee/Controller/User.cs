@@ -31,9 +31,6 @@ namespace Yatzee.Controller
             PlayerList.Add(player = new Player("Human", ListaAvRoll));
             show = new ViewStatus();
         }
-
-     
-    
         public void MainMenu()
         {
             do {
@@ -156,7 +153,7 @@ namespace Yatzee.Controller
                             return;
                         case 1:
                             dicenumber = 0;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);  // WORKS
+                            roll.ReRoll(dicenumber, ListaAvRoll, player);  
                             continue;
                         case 2:
                             dicenumber = 1;
