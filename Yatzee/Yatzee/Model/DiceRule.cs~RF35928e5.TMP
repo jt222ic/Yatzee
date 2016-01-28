@@ -6,35 +6,32 @@ using System.Threading.Tasks;
 
 namespace Yatzee.Model
 {
-    class DiceRule 
+    class DiceRule :BoxisFilled
     {
-      public List<int> DiceList;
+      public List<int> Testingphase;
        public int Sum = 0;
        public int TotalScore = 0;
        public int BonusSum;
        public int playerValue;
        public int BonusPoint;
-       CheckBox box;
-       public DiceRule(CheckBox check)
-       {
-           box = check;
-       }
+
+        public override 
+
         public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
         {
-            
             playerValue = PlayerSelectValues;
             Sum = 0;
-            DiceList = ListOfDice;
-                for (int i = 0; i < DiceList.Count; i++ )
+            Testingphase = ListOfDice;
+                for (int i = 0; i < Testingphase.Count; i++ )
                 {
-                    if (DiceList[i] == playerValue)
+                    if (Testingphase[i] == playerValue)
                     {
                         Sum += playerValue;
                         TotalScore += playerValue;
                         BonusSum += playerValue;
                     }
-                    box.checkBox(playerValue);
                 }
+                
                 Console.WriteLine("Position {0}", Sum);
                 return Sum;
         }

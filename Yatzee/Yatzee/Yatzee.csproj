@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\User.cs" />
+    <Compile Include="Model\Ai.cs" />
+    <Compile Include="Model\CheckBox.cs" />
     <Compile Include="Model\Computer.cs" />
     <Compile Include="Model\DAL.cs" />
     <Compile Include="Model\Dice.cs" />

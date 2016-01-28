@@ -18,6 +18,7 @@ namespace Yatzee.Controller
         DiceRule Rules;
         List<int> ListaAvRoll;
         IReadOnlyCollection<Player> ListOfPlayers;
+        CheckBox box;
         bool perforReRoll = false;
         bool RerollView = false;
         int Tossthree = 0;
@@ -26,37 +27,38 @@ namespace Yatzee.Controller
         int choice;
         public User()
         {
+            box = new CheckBox();
             roll = new Dice();
-            Rules = new DiceRule();
-            PlayerList.Add(player = new Player("Human", ListaAvRoll));
+            Rules = new DiceRule(box);
+            PlayerList.Add(player = new Player("Human", ListaAvRoll, box));
             show = new ViewStatus();
         }
         public void MainMenu()
         {
-            do {
+            do
+            {
                 show.DisplayFirstPage(perforReRoll);
                 string choices = System.Console.ReadLine();
                 int Choice = int.Parse(choices);
 
-                switch(Choice)
+                switch (Choice)
                 {
                     case 0:
-                      ListaAvRoll = roll.Roll();
-                      perforReRoll = true;
-                        
-                      show.DisplayRoll(ListaAvRoll, RerollView);
-                        break;
+                        ListaAvRoll = roll.Roll();
+                        perforReRoll = true;
 
+                        show.DisplayRoll(ListaAvRoll, RerollView);
+                        break;
                     case 1:
                         DAL.SaveToFile();
                         break;
                     case 2:
                         FillTheGap();
                         break;
-                        
+
                     case 3:
                         ChoiceOfReRoll(show);
-                        break;  
+                        break;
                     case 4:
                         Register();
                         break;
@@ -67,11 +69,11 @@ namespace Yatzee.Controller
                         show.DisplayScore(DAL.getMemberList());
                         break;
                     case 7:
-                        playerDone = true;
+
                         Ai.TestingAI(playerDone);
                         break;
                     case 8:
-                        //show.AiList(DAL.GetComputerList(),Ai);
+
 
                     case 9:
                         DAL.Initialize();
@@ -82,28 +84,29 @@ namespace Yatzee.Controller
         }
         public void Register()
         {
-            do{
+            do
+            {
                 show.Register();
                 string Registration = System.Console.ReadLine();
                 int RegisterAlt = int.Parse(Registration);
 
-            switch(RegisterAlt)
-            {
-                case 0:
-                   return;
-                case 1:
-                  PlayerList.Add(player = new Player(show.ReturnInfo(), ListaAvRoll));
-                    break;
-                case 2:
-                    Ai = new Computer();
-                    break;
-                case 3:
-                    ChangePlayer();
-                    break;
-                case 4:
-                    RemovePlayer();
-                    break;
-            }
+                switch (RegisterAlt)
+                {
+                    case 0:
+                        return;
+                    case 1:
+                        PlayerList.Add(player = new Player(show.ReturnInfo(), ListaAvRoll, box));
+                        break;
+                    case 2:
+                        Ai = new Computer();
+                        break;
+                    case 3:
+                        ChangePlayer();
+                        break;
+                    case 4:
+                        RemovePlayer();
+                        break;
+                }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
         }
@@ -124,10 +127,10 @@ namespace Yatzee.Controller
 
         public void ChangePlayer()
         {
-            
+
             ListOfPlayers = DAL.getMemberList();
             show.CompactList(ListOfPlayers);
-           choice = int.Parse(Console.ReadLine());
+            choice = int.Parse(Console.ReadLine());
             if (choice == 0)
             {
                 return;
@@ -142,57 +145,57 @@ namespace Yatzee.Controller
             Tossthree = 0;
             bool RerollView = true;
             show.DisplayRoll(ListaAvRoll, RerollView);
-            do{
-              show.showDiceAlternative(player.HoldState);
-              string NewReRoll = System.Console.ReadLine();
-              int DiceChoice = int.Parse(NewReRoll);
+            do
+            {
+                show.showDiceAlternative(player.HoldState);
+                string NewReRoll = System.Console.ReadLine();
+                int DiceChoice = int.Parse(NewReRoll);
 
-                    switch (DiceChoice)
-                    {
-                        case 0:
-                            return;
-                        case 1:
-                            dicenumber = 0;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);  
-                            continue;
-                        case 2:
-                            dicenumber = 1;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);
-                            break;
-                        case 3:
-                            dicenumber = 2;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);
-                            break;
-                        case 4:
-                            dicenumber = 3;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);
-                            break;
-                        case 5:
-                            dicenumber = 4;
-                            roll.ReRoll(dicenumber, ListaAvRoll, player);
-                            break;
+                switch (DiceChoice)
+                {
+                    case 0:
+                        return;
+                    case 1:
+                        dicenumber = 0;
+                        roll.ReRoll(dicenumber, ListaAvRoll, player);
+                        continue;
+                    case 2:
+                        dicenumber = 1;
+                        roll.ReRoll(dicenumber, ListaAvRoll, player);
+                        break;
+                    case 3:
+                        dicenumber = 2;
+                        roll.ReRoll(dicenumber, ListaAvRoll, player);
+                        break;
+                    case 4:
+                        dicenumber = 3;
+                        roll.ReRoll(dicenumber, ListaAvRoll, player);
+                        break;
+                    case 5:
+                        dicenumber = 4;
+                        roll.ReRoll(dicenumber, ListaAvRoll, player);
+                        break;
 
-                        case 6:
-                            if (Tossthree <2)
-                            {
-                                show.DisplayRoll(ListaAvRoll, perforReRoll);
-                                Tossthree++;
-                            }
-                            else 
-                            {
-                                player.HoldState = true;
-                                
-                            }
-                              break;
+                    case 6:
+                        if (Tossthree < 2)
+                        {
+                            show.DisplayRoll(ListaAvRoll, perforReRoll);
+                            Tossthree++;
+                        }
+                        else
+                        {
+                            player.HoldState = true;
+                        }
+                        break;
                 }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
         }
         public void FillTheGap()
         {
-
+            playerDone = true;
             show.DisplayScore(DAL.getMemberList());
-           
+
             do
             {
                 string choices = System.Console.ReadLine();
@@ -202,52 +205,71 @@ namespace Yatzee.Controller
                 perforReRoll = false;
                 player.GetTotalScore = Rules.TotalScore;
                 player.GetBonus = Rules.Bonus();
-            
-            switch(RuleChoice)
-            {
 
-               case 0:
-                    return;
+                switch (RuleChoice)
+                {
 
-               case 1:
-               PlayerValue = 1;
-               Console.WriteLine("Mark on 1");
-               player.GetOne = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-               break;
+                    case 0:
+                        return;
 
-                case 2:
-               PlayerValue = 2;
-               Console.WriteLine("Mark on 2");
-               player.GetTwo = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-               break;
+                    case 1:
+                        PlayerValue = 1;
+                        if (!box.gapOne())
+                        {
+                            Console.WriteLine("Mark on 1");
+                            player.GetOne = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                        }
+                        break;
 
-                case 3:
-               PlayerValue = 3;
-               player.GetThree = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-               Console.WriteLine("Mark on 3");
-               break;
+                    case 2:
+                        PlayerValue = 2;
+                        if (!box.gapTwo())
+                        {
+                            Console.WriteLine("Mark on 2");
+                            player.GetTwo = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                        }// works
+                        break;
 
-                case 4:
-               PlayerValue = 4;
-               player.GetFour = Rules.AddUpDice(ListaAvRoll, PlayerValue);  //works
-               break;
+                    case 3:
+                        PlayerValue = 3;
+                        if (!box.gapThree())
+                        {
+                            player.GetThree = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                            Console.WriteLine("Mark on 3");
+                        }//works
+                        break;
 
-                case 5:
-               PlayerValue = 5;
-               player.GetFive = Rules.AddUpDice(ListaAvRoll, PlayerValue);  // works
-               Console.WriteLine("Mark on 5");
-               break;
+                    case 4:
+                        if (!box.gapFour())
+                        {
+                            PlayerValue = 4;
+                            player.GetFour = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                            Console.WriteLine("Mark on 4");
+                        }
+                        break;
 
-                case 6:
-               PlayerValue = 6;
-               player.GetSix = Rules.AddUpDice(ListaAvRoll, PlayerValue);
-               Console.WriteLine("Mark on 6");
-               break;
+                    case 5:
+                        if (!box.gapFive())
+                        {
+                            PlayerValue = 5;
+                            player.GetFive = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                            Console.WriteLine("Mark on 5");
+                        }
+                        break;
 
-                case 7:
-               LowerSection();
-               break;
-            }
+                    case 6:
+                        if (!box.gapSix())
+                        {
+                            PlayerValue = 6;
+                            player.GetSix = Rules.AddUpDice(ListaAvRoll, PlayerValue);
+                            Console.WriteLine("Mark on 6");
+                        }
+                        break;
+
+                    case 7:
+                        LowerSection();
+                        break;
+                }
 
             }
             while
@@ -255,7 +277,7 @@ namespace Yatzee.Controller
 
         }
         public void LowerSection()
-        {  
+        {
             do
             {
                 string lowerchoices = System.Console.ReadLine();
@@ -267,18 +289,18 @@ namespace Yatzee.Controller
                 {
                     case 0:
                         return;
-                    case 1: 
-                       player.GetThreeOfAKind = Rules.ThreeOfAKind(ListaAvRoll);
-                      Console.WriteLine("Three of a Kind");   // works
-                      break;
+                    case 1:
+                        player.GetThreeOfAKind = Rules.ThreeOfAKind(ListaAvRoll);
+                        Console.WriteLine("Three of a Kind");   // works
+                        break;
 
                     case 2:
-                      player.GetFourOfAKind = Rules.FourOfAKind(ListaAvRoll);  //works
-                      Console.WriteLine("Four of a Kind");
-                      break;
+                        player.GetFourOfAKind = Rules.FourOfAKind(ListaAvRoll);  //works
+                        Console.WriteLine("Four of a Kind");
+                        break;
 
                     case 3:
-                      player.GetFullHouse = Rules.FullHouse(ListaAvRoll); // works
+                        player.GetFullHouse = Rules.FullHouse(ListaAvRoll); // works
                         Console.WriteLine("FULL HOUSE");
                         break;
 

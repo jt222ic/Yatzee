@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Yatzee.Model
 {
-    class Computer 
+    public class Computer
     {
+    
 
         Dice AiDice;
         DiceRule AiRule;
@@ -19,7 +20,7 @@ namespace Yatzee.Model
         public Computer()
         {
             AiDice = new Dice();
-            AiRule = new DiceRule();
+            //AiRule = new DiceRule();
             //sendToMemberList(this);
         }
         //public void sendToMemberList(Computer comber)

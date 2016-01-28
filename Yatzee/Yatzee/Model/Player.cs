@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Yatzee.Model
 {
     [Serializable]
-    class Player
+    public class Player
     {
-        private int TOTALSCORE;
+        public int TOTALSCORE;
         private int BonusScore;
         private string Name;
         private bool m_bHoldState = false;
@@ -22,7 +22,6 @@ namespace Yatzee.Model
         private int FullHouse;
         private int chance;
         DateTime Datum;
-        DiceRule Rules;
         List<int> test;
         private int NumberOne;
         private int NumberTwo;
@@ -30,10 +29,13 @@ namespace Yatzee.Model
         private int NumberFour;
         private int NumberFive;
         private int NumberSix;
+       
+        
         public int GetChance
         {
             get
             {
+                 
                 return chance;
             }
             set
@@ -210,8 +212,6 @@ namespace Yatzee.Model
                 NumberSix = value;
             }
         }
-
-
         public DateTime date
         {
             get
@@ -224,22 +224,26 @@ namespace Yatzee.Model
             }
         }
      
-        public Player(string name,List<int>roll)
+        public Player(string name,List<int>roll, CheckBox own)
         {
             test = roll;
             Name = name;
             //Dice sliceNDice = new Dice();
-            Rules = new DiceRule();
+            //Rules = new DiceRule();
             Datum = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
             
-            
             sendToMemberList(this);
+            own.one = false;
+            own.two = false;
+            own.three = false;
+            own.four = false;
+            own.five = false;
+            own.six = false;
         }
         public void sendToMemberList(Player member)
         {
             DAL.AddMemberToList(member);
         }
-      
         public bool HoldState
         {
             get { return m_bHoldState ; }
