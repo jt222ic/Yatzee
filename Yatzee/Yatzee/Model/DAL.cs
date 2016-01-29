@@ -33,24 +33,20 @@ namespace Yatzee.Model
         {
             memberList.Add(member);
         }
-
         public static IReadOnlyCollection<Player> getMemberList()
         {
             return memberList.AsReadOnly();
         }
-
-        public static void Initialize()
+        public static List<Player> Initialize()
         {
             memberList = LoadFromFile();
+            return memberList;
         }
-
         public static List<Player> LoadFromFile()
         {
             FileStream fileStream = null;
             List<Player> loadedList = null;
-
             FileStream file = new FileStream(_FILE_PATH, FileMode.OpenOrCreate, FileAccess.Read);
-
             BinaryFormatter binFormatter = new BinaryFormatter();
             try
             {

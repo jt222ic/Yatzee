@@ -23,7 +23,7 @@ namespace Yatzee.Model
             unique = new List<int>();
             for (i = 1; i < 6; i++)
             {
-                unique.Add(RollNumber = random.Next(1, 3));
+                unique.Add(RollNumber = random.Next(1, 7));
             }
             return unique;
         }
@@ -33,7 +33,6 @@ namespace Yatzee.Model
             {
                 OldDice[whichdice] = random.Next(1, 6);
             }
-            
             return OldDice;
         }
     }

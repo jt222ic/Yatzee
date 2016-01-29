@@ -81,50 +81,11 @@
             Id="0c04a0e6-7637-4a58-8bd3-29fcec3b366d">
             <classMoniker
               Id="c3a94cc1-41bc-4cf9-a2c5-a364c0a712ff"
-              LastKnownName="DAL"
+              LastKnownName="DAL static"
               LastKnownLocation="Package3_1903.uml" />
           </dependency>
         </suppliersInternal>
         <targetEnds>
-          <association
-            Id="2aa351f6-bf8c-441f-8b26-cbf67f476926"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Player"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
-              LastKnownName="Player"
-              LastKnownLocation="Package3_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c69ce2f5-60b7-4388-b7c2-d875ac0c9dfc"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7dd544f8-b618-42c4-a069-9992dcae8deb"
-                  name="Player"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="7c43fbd1-5130-49f5-b819-2dd1e7ebbe77"
             isDerived="false"
@@ -271,6 +232,45 @@
                 <memberEnd
                   Id="e3e4d068-164d-434e-89e8-ffdef26eb0e6"
                   name="Dice"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0316bc22-44ac-41fe-8a22-806dc1cdbb61"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
+              LastKnownName="Player"
+              LastKnownLocation="Package3_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="988de39c-b140-4966-9f05-8960cf3bc142"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82484058-14b0-4640-949e-c06613e88b3b"
+                  name="Player"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

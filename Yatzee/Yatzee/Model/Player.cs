@@ -233,6 +233,11 @@ namespace Yatzee.Model
             Datum = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
             
             sendToMemberList(this);
+            Update(own);
+        }
+
+        public void Update(CheckBox own)
+        {
             own.one = false;
             own.two = false;
             own.three = false;

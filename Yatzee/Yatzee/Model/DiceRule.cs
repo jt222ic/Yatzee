@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Yatzee.View;
 
 namespace Yatzee.Model
 {
@@ -15,9 +16,11 @@ namespace Yatzee.Model
        public int playerValue;
        public int BonusPoint;
        CheckBox box;
-       public DiceRule(CheckBox check)
+       ViewStatus show;
+       public DiceRule(CheckBox check,ViewStatus view)
        {
            box = check;
+           show = view;
        }
         public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
         {
@@ -35,7 +38,7 @@ namespace Yatzee.Model
                     }
                     box.checkBox(playerValue);
                 }
-                Console.WriteLine("Position {0}", Sum);
+                show.showResult(Sum);
                 return Sum;
         }
         public int ThreeOfAKind(List<int> Dice)
@@ -64,7 +67,7 @@ namespace Yatzee.Model
                 {
                     Sum += Dice[k];
                 }
-                Console.WriteLine("THree of a kind : {0}", Sum);
+                show.showResult(Sum);
             }
             return Sum;
         }
@@ -84,7 +87,7 @@ namespace Yatzee.Model
                         Count++;
 
                     }
-                    if (Count > 3)
+                    if (Count > 3)         // if the you obtain same cards more than 3 times
                     {
                         FourOfAKind = true;
                     }
@@ -96,7 +99,7 @@ namespace Yatzee.Model
                 {
                     Sum += Dice[k];
                 }
-                Console.WriteLine("Four of a kind : {0}", Sum);
+                show.showResult(Sum);
             }
             return Sum;
         }
@@ -116,7 +119,7 @@ namespace Yatzee.Model
                     }
                     if (Count > 4)
                     {
-                        Console.WriteLine("YATZEEAAAAAAAAAAAAAAAAAAAAAA");
+                        
                         Yatzee = true;
                     }
                 }
@@ -128,12 +131,12 @@ namespace Yatzee.Model
             return Sum;
         }
 
-        public int SmallStraight(List<int> ListOfDice)    // work
+        public int SmallStraight(List<int> ListOfDice)    
         {
             Sum = 0;
             int[] ArrayLarge = new int[5];
 
-            for (int i = 0; i < ListOfDice.Count; i++)
+            for (int i = 0; i < ListOfDice.Count; i++)    // looping to sort out the array
             {
                 ArrayLarge[0] = ListOfDice[0];
                 ArrayLarge[1] = ListOfDice[1];
@@ -143,7 +146,7 @@ namespace Yatzee.Model
             }
             Array.Sort(ArrayLarge);
 
-            if ((ArrayLarge[0] == 1) &&
+            if ((ArrayLarge[0] == 1) && 
                  (ArrayLarge[1] == 2) &&
                  (ArrayLarge[2] == 3) &&
                  (ArrayLarge[3] == 4) ||
@@ -160,13 +163,13 @@ namespace Yatzee.Model
                 Sum = 30;
 
                 TotalScore += 30;
-                Console.WriteLine("Large STRAIGHT {0}", Sum);
+                show.showResult(Sum);
             }
 
             return Sum;
         }
 
-        public int LargeStraight(List<int>ListOfDice)    // work
+        public int LargeStraight(List<int>ListOfDice)   
         {
             Sum = 0;
             int[] ArrayLarge = new int[5];
@@ -194,7 +197,7 @@ namespace Yatzee.Model
             {
                 Sum = 40;
                 TotalScore += 40;
-                Console.WriteLine("Large STRAIGHT {0}", Sum);
+                show.showResult(Sum);
             }
                 
             return Sum;
@@ -223,7 +226,7 @@ namespace Yatzee.Model
                 {
                     Sum = 25;
                     TotalScore += 25;
-                    Console.WriteLine(" FULL HOUSE {0}", Sum);
+                    show.showResult(Sum);
                 }
             
             return Sum;
@@ -241,7 +244,7 @@ namespace Yatzee.Model
         {
            Sum = 0;
           Sum += ListOfDice.Sum();
-          Console.WriteLine("CHANCE : {0}", Sum);
+          show.showResult(Sum);
             return Sum;
         }
     }
