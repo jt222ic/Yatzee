@@ -17,12 +17,13 @@ namespace Yatzee.Model
        public int BonusPoint;
        CheckBox box;
        ViewStatus show;
+      
        public DiceRule(CheckBox check,ViewStatus view)
        {
            box = check;
            show = view;
        }
-        public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
+       public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
         {
             
             playerValue = PlayerSelectValues;
@@ -32,6 +33,7 @@ namespace Yatzee.Model
                 {
                     if (DiceList[i] == playerValue)
                     {
+                        
                         Sum += playerValue;
                         TotalScore += playerValue;
                         BonusSum += playerValue;
@@ -40,6 +42,7 @@ namespace Yatzee.Model
                 }
                 show.showResult(Sum);
                 return Sum;
+              
         }
         public int ThreeOfAKind(List<int> Dice)
         {

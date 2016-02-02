@@ -1,0 +1,89 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Yatzee.View;
+
+namespace Yatzee.Model
+{
+    class Ai
+    {
+        private int TotalScore;
+        Player Player;
+        List<int> ComputerRoll;
+        DiceRule Rule;
+        Dice Roll;
+        int computervalue;
+        Random random;
+        ViewStatus Show;
+        int computerPickDice;
+        bool reroll = false;
+        public Ai(Player player, DiceRule rule, Dice roll, ViewStatus show)
+        {
+            Player = player;
+            Roll = roll;
+            Rule = rule;
+            random = new Random();
+            Show = show;
+        }
+        public bool AiTurn(bool playerdone)
+        {
+            if (!playerdone)
+            {
+                RollDice(Roll);
+            }
+            return false;
+        }
+        public bool ComputerWin()
+        {
+            if (TotalScore > Player.TOTALSCORE)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public void RollDice(Dice Roll)
+        {
+            List<int> ComputerRoll = Roll.Roll();
+            computervalue = random.Next(1, 7);
+            computerPickDice = random.Next(1,5);
+            //int[] ComputerDice = new int[5];
+            //for (int i = 0; i < ComputerRoll.Count; i++)
+            //{
+            //    ComputerDice[0] = ComputerRoll[0];
+            //    ComputerDice[1] = ComputerRoll[1];
+            //    ComputerDice[2] = ComputerRoll[2];
+            //    ComputerDice[3] = ComputerRoll[3];
+            //    ComputerDice[4] = ComputerRoll[4];
+            //}
+
+
+            bool performReroll = ComputerRoll.Contains(computerPickDice);
+            Show.DisplayRoll(ComputerRoll, reroll);
+            Show.ComputerPic(computervalue);
+            System.Threading.Thread.Sleep(700);
+                if(performReroll)
+                {
+                    computerPickDice = random.Next(1, 5);
+                    
+                    Roll.ReRoll(computerPickDice, ComputerRoll, Player);
+                    Roll.ReRoll(computerPickDice, ComputerRoll, Player);
+                    Roll.ReRoll(computerPickDice, ComputerRoll, Player);
+                    Roll.ReRoll(computerPickDice, ComputerRoll, Player);
+                    Roll.ReRoll(computerPickDice, ComputerRoll, Player);
+                    Console.WriteLine("REROLL");
+
+                }
+              
+            
+            Show.DisplayRoll(ComputerRoll, reroll);
+            Show.ComputerPic(computervalue);
+            Rule.AddUpDice(ComputerRoll, computervalue);
+
+           //Console.WriteLine(ComputerDice);
+
+        }
+    }
+}

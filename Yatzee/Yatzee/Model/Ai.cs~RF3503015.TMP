@@ -1,0 +1,117 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Yatzee.View;
+
+namespace Yatzee.Model
+{
+    class Ai
+    {
+        private int TotalScore;
+        Player Player;
+        List<int> ComputerRoll;
+        DiceRule Rule;
+        Dice Roll;
+        int computervalue;
+        Random random;
+        ViewStatus Show;
+        int computerPickDice;
+        bool reroll = false;
+        public Ai(Player player, DiceRule rule, Dice roll, ViewStatus show)
+        {
+            Player = player;
+            Roll = roll;
+            Rule = rule;
+            random = new Random();
+            Show = show;
+        }
+        public bool AiTurn(bool playerdone)
+        {
+            if (!playerdone)
+            {
+                RollDice(Roll);
+
+            }
+            return false;
+        }
+        public bool ComputerWin()
+        {
+            if (TotalScore > Player.TOTALSCORE)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public void RollDice(Dice Roll)
+        {
+            //AIN har en lista
+            //List<int> storedDiceValues = List<int>();
+            //storedeDiceValues.Add(value1, value2); t.ex. två sexor
+            //if(value3 != value1)
+
+            //List<int> AiRoll = Roll.Roll();
+            //int[] AiArray = new int[5];
+            //List<int> storedDiceValues = new List<int>();
+            //int counter =1;
+
+            //foreach (int jan in AiRoll)
+            //{
+            //    Console.WriteLine("");
+            //    Console.WriteLine("Computer Rolled{0}", jan);
+            //}
+
+            //for (int i = 0; i < AiRoll.Count; i++)
+            //{
+            //    AiArray[i] = AiRoll[i];
+
+            //    if (AiArray[i] == 1)
+            //    {
+            //        storedDiceValues.Add(Rule.AddUpDice(AiRoll, 1));
+            //        System.Threading.Thread.Sleep(700);
+            //    }
+            //}
+
+            //foreach (int jan in AiRoll)
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("2nd phase");
+            //    Console.WriteLine("Computer Rolled{0}", jan);
+            //}
+
+            //foreach ( int tran in storedDiceValues)
+            //{
+            //    Console.WriteLine("empty");
+            //    Console.WriteLine("Stored lagar{0}, {1}", tran, counter++);
+            //}
+            
+
+            //storedDiceValues.Add(AiArray[i]);
+
+            //        computervalue = random.Next(1, 7);
+            //    computerPickDice = random.Next(1,5);
+            //    int Maxvalue = AiRoll.Max();
+            //    bool performReroll = AiRoll.Contains(Maxvalue);
+            //    for (int i = 0; i < AiRoll.Count; i++)
+            //    {
+
+            //        Show.DisplayRoll(AiRoll, reroll);
+            //        Console.WriteLine("Max value of the dice picked {0}", Maxvalue);
+            //        if(AiRoll[i] == Maxvalue)
+            //        {
+            //            System.Threading.Thread.Sleep(700);
+            //            if(performReroll)
+            //            {
+            //                    Roll.ReRoll(computerPickDice, AiRoll, Player);
+            //                    Show.DisplayRoll(AiRoll, reroll);
+            //            }
+            //        }
+            //    }
+            //    System.Threading.Thread.Sleep(200);
+            //    Rule.AddUpDice(AiRoll, Maxvalue);
+            //}
+        }
+    }
+}

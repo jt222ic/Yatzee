@@ -44,10 +44,10 @@ namespace Yatzee.Model
             {
                 return true;
             }
+
             return false;
         }
         public void RollDice(Dice Roll)
-        
         {
             count = 0;
             List<int> AiRoll = Roll.Roll();
@@ -56,22 +56,11 @@ namespace Yatzee.Model
             int computervalue = random.Next(1, 6);
             int[] AiArray = new int[5];
 
-            for (int i = 0; i<AiRoll.Count;i++ )
-            {
-                AiArray[i] = AiRoll[i];
-               
-                if (AiArray[i] == 1)
-                {
-                    storedDiceValues.Add(1);
-                    
-                }
-            }
-            foreach (int lista in AiArray)
-            {
-                Console.WriteLine("DICE {0}", lista);
-            }
+            
+            Collection(AiArray, AiRoll); 
             System.Threading.Thread.Sleep(1000);
-            if (storedDiceValues.Count <2)
+
+            if (storedDiceValues.Count <= 3)
             {
                 for (int j = 0; j < storedDiceValues.Count; j++)
                 {
@@ -83,19 +72,8 @@ namespace Yatzee.Model
                 {
                     AiRoll.RemoveAt(j);
                 }
-                max = AiArray.Max();
-                Rule.AddUpDice(ValuesNew, max);
             }
-            else
-            {
-                Console.WriteLine("BIG");
-                Rule.Yatzee(AiRoll);
-                Rule.FourOfAKind(AiRoll);
-                Rule.ThreeOfAKind(AiRoll);
-                Rule.LargeStraight(AiRoll);
-                Rule.SmallStraight(AiRoll);
-            }
-            
+            Rule.AddUpDice(ValuesNew, max);
         }
 
         public List<int> Storage(List<int> storedDiceValues, List<int> Airoll, int[] AiArray)
@@ -106,6 +84,70 @@ namespace Yatzee.Model
             }
             return storedDiceValues;
         }
+
+        public void Collection(int[] AiArray,List<int> AiRoll)
+        {
+            for (int i = 0; i < AiRoll.Count; i++ )
+            {
+                if (AiArray[i] == 6)
+                {
+                    count++;
+                    if (count >= 2 && AiArray[i] == 6)
+                    {
+                        
+                        Show.ComputerPic(6);
+                    }
+                }
+                if (AiArray[i] == 5)
+                {
+                    count++;
+
+                    if (count >= 2 && AiArray[i] == 5)
+                    {
+                       
+                        Show.ComputerPic(6);
+                    }
+                }
+                if (AiArray[i] == 4)
+                {
+                    count++;
+
+                    if (count >= 2 && AiArray[i] == 4)
+                    {
+                       
+                        Show.ComputerPic(6);
+                    }
+                }
+                if (AiArray[i] == 3)
+                {
+                    count++;
+
+                    if (count >= 2 && AiArray[i] == 3)
+                    {
+                        Show.ComputerPic(3);
+                    }
+                }
+                if (AiArray[i] == 2)
+                {
+                    count++;
+
+                    if (count >= 2 && AiArray[i] == 2)
+                    {
+
+                        Show.ComputerPic(2);
+                    }
+                }
+                if (AiArray[i] == 1)
+                {
+                    count++;
+
+                    if (count >= 2 && AiArray[i] == 1)
+                    {
+                        Show.ComputerPic(1);
+                    }
+                }
+            }
+
         }
     }
-
+}

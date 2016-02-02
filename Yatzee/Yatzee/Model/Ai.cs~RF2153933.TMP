@@ -44,57 +44,53 @@ namespace Yatzee.Model
             {
                 return true;
             }
+
             return false;
         }
         public void RollDice(Dice Roll)
-        
         {
-            count = 0;
+
             List<int> AiRoll = Roll.Roll();
             List<int> storedDiceValues = new List<int>();    
             List<int> ValuesNew = new List<int>();
             int computervalue = random.Next(1, 6);
             int[] AiArray = new int[5];
+                     
 
-            for (int i = 0; i<AiRoll.Count;i++ )
+            for (int i = 0; i < AiRoll.Count; i++ )
             {
                 AiArray[i] = AiRoll[i];
-               
-                if (AiArray[i] == 1)
+
+                if (AiArray[i] == 6)
                 {
-                    storedDiceValues.Add(1);
-                    
+                    storedDiceValues.Add(AiRoll[i]);
+                    max = storedDiceValues.Max();
+                    Show.ComputerPic(6);
                 }
-            }
-            foreach (int lista in AiArray)
-            {
-                Console.WriteLine("DICE {0}", lista);
+                else if (AiArray[i] == 1)
+                {
+                  storedDiceValues.Add(AiRoll[i]);     
+                  max = storedDiceValues.Max();
+                  Show.ComputerPic(1);
+                }
             }
             System.Threading.Thread.Sleep(1000);
-            if (storedDiceValues.Count <2)
+
+            if (storedDiceValues.Count <= 3)
             {
-                for (int j = 0; j < storedDiceValues.Count; j++)
+                for (int j = 0; j < storedDiceValues.Count; j++)         
                 {
                     AiRoll.RemoveAt(j);
                 }
-                Roll.BotReRoll(AiRoll);
-                ValuesNew = Storage(storedDiceValues, AiRoll, AiArray);
+            }
+            Roll.BotReRoll(AiRoll);
+          
+                ValuesNew = Storage(storedDiceValues, AiRoll, AiArray);                       
                 for (int j = 5; j < ValuesNew.Count; j--)
-                {
+                { 
                     AiRoll.RemoveAt(j);
                 }
-                max = AiArray.Max();
-                Rule.AddUpDice(ValuesNew, max);
-            }
-            else
-            {
-                Console.WriteLine("BIG");
-                Rule.Yatzee(AiRoll);
-                Rule.FourOfAKind(AiRoll);
-                Rule.ThreeOfAKind(AiRoll);
-                Rule.LargeStraight(AiRoll);
-                Rule.SmallStraight(AiRoll);
-            }
+            Rule.AddUpDice(ValuesNew, max);
             
         }
 
@@ -106,6 +102,5 @@ namespace Yatzee.Model
             }
             return storedDiceValues;
         }
-        }
     }
-
+}

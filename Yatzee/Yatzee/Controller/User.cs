@@ -14,7 +14,7 @@ namespace Yatzee.Controller
         Player player;
         List<Player> PlayerList = new List<Player>();
         Dice roll;
-        Computer Ai;
+        Ai Ai;
         DiceRule Rules;
         List<int> ListaAvRoll;
         IReadOnlyCollection<Player> ListOfPlayers;
@@ -24,6 +24,7 @@ namespace Yatzee.Controller
         int Tossthree = 0;
         int dicenumber;
         public bool playerDone;
+
         int choice;
         public User()
         {
@@ -70,7 +71,10 @@ namespace Yatzee.Controller
                         break;
                     case 7:                             // weird bug when used 7 u register the same char twice
                      PlayerList = DAL.Initialize();   // load the list so you have to pick the right character by pressing switch and the right number id
-                    
+                     break;
+                    case 8:
+
+                     Ai.AiTurn(playerDone);
                         break;
                 }
             }
@@ -82,6 +86,8 @@ namespace Yatzee.Controller
             {
                 show.Register();
                 string Registration = System.Console.ReadLine();
+                
+                
                 int RegisterAlt = int.Parse(Registration);
 
                 switch (RegisterAlt)
@@ -92,7 +98,7 @@ namespace Yatzee.Controller
                       PlayerList.Add(player = new Player(show.ReturnInfo(), ListaAvRoll, box));
                         break;
                     case 2:
-                        Ai = new Computer();
+                        Ai = new Ai(player,new DiceRule(box,show), new Dice(), show);
                         break;
                     case 3:
                         ChangePlayer();

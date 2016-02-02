@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Yatzee.View;
+
+namespace Yatzee.Model
+{
+    class Ai
+    {
+        private int TotalScore;
+        Player Player;
+        List<int> ComputerRoll;
+        DiceRule Rule;
+        Dice Roll;
+        int computervalue;
+        Random random;
+        ViewStatus Show;
+        int computerPickDice;
+        bool reroll = false;
+        public Ai(Player player, DiceRule rule, Dice roll, ViewStatus show)
+        {
+            Player = player;
+            Roll = roll;
+            Rule = rule;
+            random = new Random();
+            Show = show;
+        }
+        public bool AiTurn(bool playerdone)
+        {
+            if (!playerdone)
+            {
+                RollDice(Roll);
+
+            }
+            return false;
+        }
+        public bool ComputerWin()
+        {
+            if (TotalScore > Player.TOTALSCORE)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public void RollDice(Dice Roll)
+        {
+
+            List<int> AiRoll = Roll.Roll();
+            List<int> storedDiceValues = new List<int>();
+            List<int> ValuesNew = new List<int>();
+    
+            int[] AiArray = new int[5];
+        
+            for (int i = 0; i < AiRoll.Count; i++ )
+            {
+                AiArray[i] = AiRoll[i];
+
+            }
+             int max = AiArray.Max();
+             bool mostthree = AiArray.Contains(3);
+             bool mostsix = AiArray.Contains(6);
+             bool mostFive = AiArray.Contains(5);
+            foreach(int rollin in AiRoll)
+            {
+                Console.WriteLine("hej {0}", rollin);
+            }
+
+            if (mostsix)
+            {
+                Rule.AddUpDice(AiRoll, 6);
+            }
+            else if (mostthree)
+            {
+                Rule.AddUpDice(AiRoll, 3);
+            }
+            else if (mostthree)
+            {
+                Rule.AddUpDice(AiRoll, 3);
+            }
+        }
+    }
+}

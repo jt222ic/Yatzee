@@ -85,6 +85,12 @@ namespace Yatzee.View
                 System.Console.WriteLine("======================================================");
             }
         }
+
+        public void ComputerPic(int computerpick)
+        {
+            Console.WriteLine("computer picked {0}", computerpick);
+
+        }
         public void DisplayScore(IReadOnlyCollection<Player> list)
         {
             foreach (Model.Player member in list)
