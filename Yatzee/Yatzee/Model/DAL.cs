@@ -14,7 +14,8 @@ namespace Yatzee.Model
         private static readonly string _FILE_PATH = "infoLista.bin";      //refrens https://www.youtube.com/watch?v=URw86vBWeGE
 
         private static List<Player> memberList = new List<Player>();
-        //private static List<Computer> CompList = new List<Computer>();
+        private static List<Computer> compList = new List<Computer>();
+        
 
         public static void SaveToFile()                                                 // referens för användning av Serialized 
         {
@@ -22,7 +23,6 @@ namespace Yatzee.Model
             {
                 BinaryFormatter binFormatter = new BinaryFormatter();
                 binFormatter.Serialize(fileStream, memberList);
-                
             }
         }
         public static void removeMember(int choice)
@@ -58,19 +58,16 @@ namespace Yatzee.Model
                 loadedList = new List<Player>();
             }
             file.Close();
-
             return loadedList;
-
         }
-        //public static IReadOnlyCollection<Computer> GetComputerList()
-        //{
 
-        //    return CompList.AsReadOnly();
-
-        //}
-        //public static void AddCompList(Computer member)
-        //{
-        //    CompList.Add(member);
-        //}
+        public static IReadOnlyCollection<Computer> GetComputerList()
+        {
+            return compList.AsReadOnly();
+        }
+        public static void AddCompList(Computer comp)
+        {
+            compList.Add(comp);
+        }
     }
 }

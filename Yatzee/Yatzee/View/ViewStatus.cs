@@ -91,7 +91,7 @@ namespace Yatzee.View
             Console.WriteLine("computer picked {0}", computerpick);
 
         }
-        public void DisplayScore(IReadOnlyCollection<Player> list)
+        public void DisplayScore(IReadOnlyCollection<Player> list, IReadOnlyCollection<Computer> complist)
         {
             foreach (Model.Player member in list)
             {
@@ -138,6 +138,56 @@ namespace Yatzee.View
                 System.Console.WriteLine("YAHTZEE               ||{0}          ||", member.GetYatzee);
                 System.Console.WriteLine("=====================================");
                 System.Console.WriteLine("TOTALSCORE            ||{0}          ||", member.GetTotalScore);
+
+
+                foreach (Model.Computer comp in complist)
+                {
+                    int i = 1;
+
+                    System.Console.WriteLine("                                     ");
+                    System.Console.WriteLine("                                     ");
+                    System.Console.WriteLine("                                     ");
+                    System.Console.WriteLine("                                     ");
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine(" ****Yatzee****||Computer{0}       ||", i++);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("============UpperSection=============");
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Ones         ||{0}       ||", comp.GetOne);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Twos         ||{0}       ||", comp.GetTwo);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Threes       ||{0}       ||", comp.GetThree);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Fours        ||{0}       ||", comp.GetFour);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Five         ||{0}       ||", comp.GetFive);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Sixes        ||{0}       ||", comp.GetSix);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Sum          ||          ||");
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("         Bonus        ||{0}       ||", comp.GetBonus);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("============LowerSection=============");
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Three of a Kind       ||{0}          ||", comp.GetThreeOfAKind);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Four of a Kind        ||{0}          ||", comp.GetFourOfAKind);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Full House            ||{0}          ||", comp.GetFullHouse);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Small Straight        ||{0}          ||", comp.GetSmallStraight);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Large Straight        ||{0}          ||", comp.GetLargeStraight);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("Chance                ||{0}          ||", comp.GetChance);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("YAHTZEE               ||{0}          ||", comp.GetYatzee);
+                    System.Console.WriteLine("=====================================");
+                    System.Console.WriteLine("TOTALSCORE            ||{0}          ||", comp.GetTotalScore);
+                }
             }
         }
 

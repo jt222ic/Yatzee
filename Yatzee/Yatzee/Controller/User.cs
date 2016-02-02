@@ -18,6 +18,7 @@ namespace Yatzee.Controller
         DiceRule Rules;
         List<int> ListaAvRoll;
         IReadOnlyCollection<Player> ListOfPlayers;
+        IReadOnlyCollection<Computer> ListOfComputer;
         CheckBox box;
         bool perforReRoll = false;
         bool RerollView = false;
@@ -67,15 +68,14 @@ namespace Yatzee.Controller
                         show.CompactList(DAL.getMemberList());
                         break;
                     case 6:
-                        show.DisplayScore(DAL.getMemberList());
+                        show.DisplayScore(DAL.getMemberList(),DAL.GetComputerList());
                         break;
                     case 7:                             // weird bug when used 7 u register the same char twice
                      PlayerList = DAL.Initialize();   // load the list so you have to pick the right character by pressing switch and the right number id
                      break;
                     case 8:
-
                      Ai.AiTurn(playerDone);
-                        break;
+                     break;
                 }
             }
             while (Console.ReadKey(true).Key != ConsoleKey.Escape);
@@ -130,6 +130,7 @@ namespace Yatzee.Controller
         {
             
             ListOfPlayers = DAL.getMemberList();
+            ListOfComputer = DAL.GetComputerList();
             show.CompactList(ListOfPlayers);
             choice = int.Parse(Console.ReadLine());
             if (choice == 0)
@@ -201,7 +202,7 @@ namespace Yatzee.Controller
         }
         public void FillTheGap()
         {
-            show.DisplayScore(DAL.getMemberList());
+            show.DisplayScore(DAL.getMemberList(),DAL.GetComputerList());
             do
             {
                     string choices = System.Console.ReadLine();

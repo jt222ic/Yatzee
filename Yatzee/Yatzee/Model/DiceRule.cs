@@ -7,47 +7,49 @@ using Yatzee.View;
 
 namespace Yatzee.Model
 {
-    class DiceRule 
+    class DiceRule
     {
-      public List<int> DiceList;
-       public int Sum = 0;
-       public int TotalScore = 0;
-       public int BonusSum;
-       public int playerValue;
-       public int BonusPoint;
-       CheckBox box;
-       ViewStatus show;
-      
-       public DiceRule(CheckBox check,ViewStatus view)
-       {
-           box = check;
-           show = view;
-       }
-       public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
+        public List<int> DiceList;
+        public int Sum = 0;
+        public int TotalScore = 0;
+        public int BonusSum;
+        public int playerValue;
+        public int BonusPoint;
+        CheckBox box;
+        ViewStatus show;
+        public bool m_Yatzee = false;
+        public bool m_FourOfAKind = false;
+        public bool m_ThreeOfAKind = false;
+        public DiceRule(CheckBox check, ViewStatus view)
         {
-            
+            box = check;
+            show = view;
+        }
+        public int AddUpDice(List<int> ListOfDice, int PlayerSelectValues)
+        {
+
             playerValue = PlayerSelectValues;
             Sum = 0;
             DiceList = ListOfDice;
-                for (int i = 0; i < DiceList.Count; i++ )
+            for (int i = 0; i < DiceList.Count; i++)
+            {
+                if (DiceList[i] == playerValue)
                 {
-                    if (DiceList[i] == playerValue)
-                    {
-                        
-                        Sum += playerValue;
-                        TotalScore += playerValue;
-                        BonusSum += playerValue;
-                    }
-                    box.checkBox(playerValue);
+
+                    Sum += playerValue;
+                    TotalScore += playerValue;
+                    BonusSum += playerValue;
                 }
-                show.showResult(Sum);
-                return Sum;
-              
+                box.checkBox(playerValue);
+            }
+            show.showResult(Sum);
+            return Sum;
+
         }
         public int ThreeOfAKind(List<int> Dice)
         {
             Sum = 0;
-            bool ThreeOfAKind = false;
+            m_ThreeOfAKind = false;
 
             for (int i = 1; i <= 6; i++)
             {
@@ -60,11 +62,11 @@ namespace Yatzee.Model
                     }
                     if (Count > 2)
                     {
-                        ThreeOfAKind = true;
+                        m_ThreeOfAKind = true;
                     }
                 }
             }
-            if (ThreeOfAKind)
+            if (m_ThreeOfAKind)
             {
                 for (int k = 0; k < 5; k++)
                 {
@@ -78,7 +80,7 @@ namespace Yatzee.Model
         public int FourOfAKind(List<int> Dice)
         {
             Sum = 0;
-            bool FourOfAKind = false;
+            m_FourOfAKind = false;
 
             for (int i = 1; i <= 6; i++)
             {
@@ -92,11 +94,11 @@ namespace Yatzee.Model
                     }
                     if (Count > 3)         // if the you obtain same cards more than 3 times
                     {
-                        FourOfAKind = true;
+                        m_FourOfAKind = true;
                     }
                 }
             }
-            if (FourOfAKind)
+            if (m_FourOfAKind)
             {
                 for (int k = 0; k < 5; k++)
                 {
@@ -109,7 +111,7 @@ namespace Yatzee.Model
         public int Yatzee(List<int> Dice)
         {
             Sum = 0;
-            bool Yatzee = false;
+            m_Yatzee = false;
 
             for (int i = 1; i <= 6; i++)
             {
@@ -122,19 +124,19 @@ namespace Yatzee.Model
                     }
                     if (Count > 4)
                     {
-                        
-                        Yatzee = true;
+
+                        m_Yatzee = true;
                     }
                 }
             }
-            if (Yatzee)
+            if (m_Yatzee)
             {
                 Sum = 50;
             }
             return Sum;
         }
 
-        public int SmallStraight(List<int> ListOfDice)    
+        public int SmallStraight(List<int> ListOfDice)
         {
             Sum = 0;
             int[] ArrayLarge = new int[5];
@@ -149,7 +151,7 @@ namespace Yatzee.Model
             }
             Array.Sort(ArrayLarge);
 
-            if ((ArrayLarge[0] == 1) && 
+            if ((ArrayLarge[0] == 1) &&
                  (ArrayLarge[1] == 2) &&
                  (ArrayLarge[2] == 3) &&
                  (ArrayLarge[3] == 4) ||
@@ -172,7 +174,7 @@ namespace Yatzee.Model
             return Sum;
         }
 
-        public int LargeStraight(List<int>ListOfDice)   
+        public int LargeStraight(List<int> ListOfDice)
         {
             Sum = 0;
             int[] ArrayLarge = new int[5];
@@ -185,28 +187,28 @@ namespace Yatzee.Model
                 ArrayLarge[3] = ListOfDice[3];
                 ArrayLarge[4] = ListOfDice[4];
             }
-            Array.Sort(ArrayLarge); 
+            Array.Sort(ArrayLarge);
 
-                if (((ArrayLarge[0] == 1) &&       
-                     (ArrayLarge[1] == 2) &&
-                     (ArrayLarge[2] == 3) &&
-                     (ArrayLarge[3] == 4) &&
-                     (ArrayLarge[4] == 5))||
-                     ((ArrayLarge[0] == 2) &&
-                     (ArrayLarge[1] == 3) &&
-                     (ArrayLarge[2] == 4) &&
-                     (ArrayLarge[3] == 5) &&
-                     (ArrayLarge[4] == 6)))
+            if (((ArrayLarge[0] == 1) &&
+                 (ArrayLarge[1] == 2) &&
+                 (ArrayLarge[2] == 3) &&
+                 (ArrayLarge[3] == 4) &&
+                 (ArrayLarge[4] == 5)) ||
+                 ((ArrayLarge[0] == 2) &&
+                 (ArrayLarge[1] == 3) &&
+                 (ArrayLarge[2] == 4) &&
+                 (ArrayLarge[3] == 5) &&
+                 (ArrayLarge[4] == 6)))
             {
                 Sum = 40;
                 TotalScore += 40;
                 show.showResult(Sum);
             }
-                
+
             return Sum;
         }
 
-        public int FullHouse(List<int>ListOfDice)
+        public int FullHouse(List<int> ListOfDice)
         {
             Sum = 0;
             int[] ArrayHouse = new int[5];
@@ -220,23 +222,23 @@ namespace Yatzee.Model
                 ArrayHouse[4] = ListOfDice[4];
             }
             Array.Sort(ArrayHouse);
-                if ((((ArrayHouse[0] == ArrayHouse[1]) && (ArrayHouse[1] == ArrayHouse[2])) &&
-                     (ArrayHouse[3] == ArrayHouse[4]) &&
-                     (ArrayHouse[2] != ArrayHouse[3])) ||
-                    ((ArrayHouse[0] == ArrayHouse[1]) &&
-                     ((ArrayHouse[2] == ArrayHouse[3]) && (ArrayHouse[3] == ArrayHouse[4])) &&
-                     (ArrayHouse[1] != ArrayHouse[2])))
-                {
-                    Sum = 25;
-                    TotalScore += 25;
-                    show.showResult(Sum);
-                }
-            
+            if ((((ArrayHouse[0] == ArrayHouse[1]) && (ArrayHouse[1] == ArrayHouse[2])) &&
+                 (ArrayHouse[3] == ArrayHouse[4]) &&
+                 (ArrayHouse[2] != ArrayHouse[3])) ||
+                ((ArrayHouse[0] == ArrayHouse[1]) &&
+                 ((ArrayHouse[2] == ArrayHouse[3]) && (ArrayHouse[3] == ArrayHouse[4])) &&
+                 (ArrayHouse[1] != ArrayHouse[2])))
+            {
+                Sum = 25;
+                TotalScore += 25;
+                show.showResult(Sum);
+            }
+
             return Sum;
         }
         public int Bonus()
         {
-            if(BonusSum>75)
+            if (BonusSum > 75)
             {
                 BonusPoint = 50;
                 TotalScore += BonusPoint;
@@ -245,10 +247,11 @@ namespace Yatzee.Model
         }
         public int Chance(List<int> ListOfDice)
         {
-           Sum = 0;
-          Sum += ListOfDice.Sum();
-          show.showResult(Sum);
+            Sum = 0;
+            Sum += ListOfDice.Sum();
+            show.showResult(Sum);
             return Sum;
         }
+     
     }
 }

@@ -84,448 +84,15 @@
               LastKnownName="DAL static"
               LastKnownLocation="Package3_1903.uml" />
           </dependency>
+          <dependency
+            Id="5be971fa-862f-4534-8bce-df5030cb825e">
+            <classMoniker
+              Id="271d8b7f-4768-49c1-a78e-400a6e09d9be"
+              LastKnownName="DAL"
+              LastKnownLocation="Package3_1903.uml" />
+          </dependency>
         </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="7c43fbd1-5130-49f5-b819-2dd1e7ebbe77"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="DiceRule"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="f20b339d-2db9-4008-9396-883b1dd404fc"
-              LastKnownName="DiceRule"
-              LastKnownLocation="Package3_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="f4b5e655-186e-42c7-9cb8-25b1bb2dbdfc"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="732d0296-a4b7-47d4-b845-1a7c38f7b27b"
-                  name="DiceRule"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="ca306e75-eada-4e16-9880-150162dce610"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Computer"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="a20b8a6e-f1b5-4662-814f-635bfdb266cc"
-              LastKnownName="Computer"
-              LastKnownLocation="Package3_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a444e198-b95a-431b-957a-df8914841aa1"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c7b48c6c-8d55-47d9-a39c-229401e79acf"
-                  name="Computer"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="43286c2a-109b-4845-8111-a58b2b76640a"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="ViewStatus"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="405ab489-6193-461a-b882-d719c78ece22"
-              LastKnownName="ViewStatus"
-              LastKnownLocation="Package2_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="220c0f4b-6d7f-4022-8c36-0a36a00e3ce4"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c46c0f2a-33c6-478b-bb1f-85a668fdf5ec"
-                  name="ViewStatus"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="c9509100-9e72-47c4-8574-606290b7f87a"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Dice"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="55eb7c31-d920-4a9a-b13d-10be4ee9d4cd"
-              LastKnownName="Dice"
-              LastKnownLocation="Package3_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0df15f02-2b47-4ee6-b5cb-2de5a6cb3478"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e3e4d068-164d-434e-89e8-ffdef26eb0e6"
-                  name="Dice"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="0316bc22-44ac-41fe-8a22-806dc1cdbb61"
-            isDerived="false"
-            sourceEndRoleName="User"
-            targetEndRoleName="Player"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
-              LastKnownName="Player"
-              LastKnownLocation="Package3_1903.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="988de39c-b140-4966-9f05-8960cf3bc142"
-                  name="User"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="82484058-14b0-4640-949e-c06613e88b3b"
-                  name="Player"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
-          <property
-            Id="69e7a4ab-0d26-4503-9c07-fb1a613e6b88"
-            name="DiceRule"
-            visibility="Package"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="fc9826eb-63ee-458d-97b6-5cede4ff809e"
-                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3DDiceRule"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="9d1906fe-9723-48a5-b0c8-021a62edf2f0"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="371122a3-d2fe-47c8-80be-325a0950f080">
-                    <propertyInstance
-                      Id="1451fe34-ccb5-4666-add5-d474be5dbd7b"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="60a21bce-dd0f-4774-af6c-f97168d4a7bc">
-                    <propertyInstance
-                      Id="761cd311-11f5-453f-8ee8-e3cedb758fb9"
-                      name="Get"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d65d2afc-ef07-4e10-a386-e600bf305d62">
-                    <propertyInstance
-                      Id="9db5dec2-471e-4b0e-bb87-638aea08e4d1"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3cc48e34-6009-49d5-8ce9-a4a0b3a3fa0d">
-                    <propertyInstance
-                      Id="356ba4d7-7a0a-4a82-adea-edaecff2928d"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="44808baa-a8cd-46b9-80a7-10b0089b2864">
-                    <propertyInstance
-                      Id="6c79a930-da1b-435e-a791-8a8dd758e40c"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7c5ffbc2-aec3-4941-9371-f87af3c01857">
-                    <propertyInstance
-                      Id="76ad593a-cccb-4888-83c9-8013c8bd712c"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e58b84fe-1ee6-432d-837a-2b11945f7a1b">
-                    <propertyInstance
-                      Id="1d6c0de9-ae2f-43dc-8022-6714bd1e20d1"
-                      name="Set"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="f20b339d-2db9-4008-9396-883b1dd404fc"
-                LastKnownName="DiceRule"
-                LastKnownLocation="Package3_1903.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="2cb0cad1-5a40-4234-a157-a00ec8196513"
-            name="Dice"
-            visibility="Package"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="2f65359d-70ce-486b-91bb-bb28fb1e3c05"
-                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3DDice"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="db589210-8006-4e7f-84ec-4222068c8ea6"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="988242b3-6da2-49c3-9b94-1175db15ec9c">
-                    <propertyInstance
-                      Id="205866b8-0c4a-478f-885a-72b737f42d03"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d91cbf31-2d06-4328-bd97-68f94ed90129">
-                    <propertyInstance
-                      Id="8d52b5f8-f881-48c5-bb7d-97e974c0cba0"
-                      name="Get"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8398c74b-e0f9-4209-a2c1-35a2047f17e1">
-                    <propertyInstance
-                      Id="fb8384ca-3e02-44d3-addd-48de603c9ba4"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="53bb8343-3efd-4581-b2b0-a40c4a8556ea">
-                    <propertyInstance
-                      Id="266b7376-fe64-44fe-bca7-c2f899182ebf"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a36e2505-f53c-4d1e-8e47-efe8c5e0baa3">
-                    <propertyInstance
-                      Id="55299926-a20e-4c50-b4e0-f5205f5263cb"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ae4f81b4-a95b-43df-9686-f29527969023">
-                    <propertyInstance
-                      Id="75ffa8b4-841e-42d6-a9d1-3b4862e7e973"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c6d783f5-09c9-4c0c-bee4-67911710a6d4">
-                    <propertyInstance
-                      Id="75f32906-6422-43f6-9142-016f463d56ba"
-                      name="Set"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="55eb7c31-d920-4a9a-b13d-10be4ee9d4cd"
-                LastKnownName="Dice"
-                LastKnownLocation="Package3_1903.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="787162a9-8551-4506-b7e0-e03d4bcebc80"
-            name="Player"
-            visibility="Package"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <referencesInternal>
-              <reference
-                Id="f471baad-c078-4a00-a28c-40d0d4a7644e"
-                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3DPlayer"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="d5247fa6-c255-4573-adc6-ecea43968da8"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c2fe9b71-1052-4779-9355-8c668ccfa29d">
-                    <propertyInstance
-                      Id="c62916d7-f1c2-4167-9469-e44d0d16c6d3"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="212ce103-acb7-47ea-8e34-2cbc31a0a217">
-                    <propertyInstance
-                      Id="7ba7c44d-039b-44d7-b41f-70ecbc4d02e7"
-                      name="Get"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fb3193ad-397c-4a90-9a96-7e46bde59e02">
-                    <propertyInstance
-                      Id="3f782c22-c2a4-4060-b90c-66782818bbed"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2c6f6c34-d5b8-42b3-97bf-1c578f62a81f">
-                    <propertyInstance
-                      Id="d8650fce-8778-4302-80c0-48c4490902aa"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="53b6a916-13e2-4cbc-b436-09ffca6a10f0">
-                    <propertyInstance
-                      Id="02d4cb41-f6e4-4927-ac55-8e8ea3477ef3"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a9ec748f-edb7-4509-a6a2-0d620ad91ed6">
-                    <propertyInstance
-                      Id="8e58d2f7-7770-4d98-b59b-149a3939054b"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5ec446f1-b5a8-4819-9de0-69607daa39b9">
-                    <propertyInstance
-                      Id="076c6067-a797-4be2-bf2d-adc2c6342ba6"
-                      name="Set"
-                      value="package" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <classMoniker
-                Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
-                LastKnownName="Player"
-                LastKnownLocation="Package3_1903.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="e512d9ab-d502-40af-ac9d-982dc320dc95"
             name="show"
@@ -856,8 +423,8 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <classMoniker
-                Id="a20b8a6e-f1b5-4662-814f-635bfdb266cc"
-                LastKnownName="Computer"
+                Id="386e55be-5af6-4e61-a719-0a87b63460be"
+                LastKnownName="Ai"
                 LastKnownLocation="Package3_1903.uml" />
             </type_NamedElement>
           </property>
@@ -1463,6 +1030,140 @@
                 LastKnownLocation="UMLYatzee.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="ce34717a-c002-4071-a42a-770d38641de5"
+            name="ListOfComputer"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6dd0b330-88f3-4a17-8922-bec82ea812db"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3DListOfComputer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="47db96e7-dba8-4964-9461-cc488959bf25"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cc586aa-c0d8-4ae0-b054-477582fd2ba7">
+                    <propertyInstance
+                      Id="7e93c629-5960-4526-87a8-940d55eed606"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be44728d-4301-4d69-8945-21f4dba523f9">
+                    <propertyInstance
+                      Id="5788680f-0e3f-426c-b909-df2accc62e8c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2816705a-bc8d-4a22-948c-198f13430bc5">
+                    <propertyInstance
+                      Id="fb4d1309-5d88-473d-9116-6e05e495acec"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="289f756e-84d2-4035-b3a2-aa4503c05303">
+                    <propertyInstance
+                      Id="2d066f06-41db-4a9f-8846-5b84acb942ef"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32d7ebd3-248c-4672-ad96-15cd43d97829">
+                    <propertyInstance
+                      Id="493bcd55-1bad-443b-b62e-aeab838108e7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="0bda14c4-7da7-440b-b9d0-f1be58d02f5f"
+                LastKnownName="IReadOnlyCollection&lt;Computer‎&gt;"
+                LastKnownLocation="Package6_1903.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f278167b-382f-44f4-8fd0-967ad901869f"
+            name="box"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6b035f86-af27-4637-be7b-1be4ce778ee4"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3Dbox"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ec3a9abd-82f4-4a65-bad6-7d6131b56990"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bece9d5-5eb8-4897-9709-560f61236566">
+                    <propertyInstance
+                      Id="13eea2ba-017d-472c-a7da-0e311911e271"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8a171f2-194a-4aa3-9490-465ad8c7e7a3">
+                    <propertyInstance
+                      Id="4285e679-f1db-42e1-93c5-696b63957200"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63123384-e9a0-4de5-9dad-27060517c4d8">
+                    <propertyInstance
+                      Id="65b9a47c-1139-48c9-a4fe-5f194bbde222"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8348cec5-13ef-4736-bfcd-f60679ca9462">
+                    <propertyInstance
+                      Id="fc5f296b-c2f3-444a-9c39-e88e5f5bc374"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d59587af-cfa7-4e63-bd73-ca2263e6e27c">
+                    <propertyInstance
+                      Id="f2f0725b-65de-4957-89e2-1ed5682fca8d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="fdd9ce1f-ebc7-41f3-b6dd-0072eb82d80d"
+                LastKnownName="CheckBox"
+                LastKnownLocation="Package3_1903.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1726,92 +1427,6 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="4cca7146-0ba5-41af-9c7a-61297b2d9c84"
-            name="ChoiceOfReRoll"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="e390356e-67e8-4af7-b4ef-2cfce08b188e"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3D(Name%3DChoiceOfReRoll OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="edc39508-c3a8-4513-9eab-431df1ab83f2"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e5f6298a-1c2f-4c04-87c5-ed7db60d84a6">
-                    <propertyInstance
-                      Id="770654e0-7a26-4c8f-824d-8a3fe779024d"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="253680a3-c635-4a2a-b230-b4446e53a2e6">
-                    <propertyInstance
-                      Id="500b17a4-ef47-4f9b-a698-5939e7b2fece"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="157c2bca-1916-4bb6-9d28-18bec23638fc">
-                    <propertyInstance
-                      Id="370f910d-53b5-4f52-a4b2-584429e2143f"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2c69bef6-2d9e-4ef3-a059-c6841579390d">
-                    <propertyInstance
-                      Id="83302f66-e90d-4a11-bdf6-44c68f3a6785"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ca264026-bba6-488d-b858-677592c60af5">
-                    <propertyInstance
-                      Id="ccbd29ec-b9af-497f-82fc-2ad09f5bda72"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ae71a93a-4108-4156-866b-74f1b3037bb9">
-                    <propertyInstance
-                      Id="31d794a0-35ac-484b-9462-4a43d2f6d372"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9dcb9013-a19c-4795-b283-3110711146ff"
-                  name="show"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="62023047-ddac-4873-8d02-61085e81fa54"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3D(Name%3DChoiceOfReRoll OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.View Type%3DViewStatus)]) ParameterIdentifier%3Dshow"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="405ab489-6193-461a-b882-d719c78ece22"
-                      LastKnownName="ViewStatus"
-                      LastKnownLocation="Package2_1903.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="495c1d5b-ddee-4c5a-a149-365560527f3f"
             name="FillTheGap"
             isLeaf="false"
@@ -1942,7 +1557,7 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="5b7b9647-eccf-46e9-9eda-9d49766746d6"
+            Id="9292bae4-fae2-4bb4-8943-fce5851e9bc0"
             name="User"
             isLeaf="false"
             isStatic="false"
@@ -1951,54 +1566,119 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="320bee21-cd21-4706-beac-a36969de84e2"
+                Id="7e5f29f7-49b0-418b-aa34-8f74b100ae4e"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="19698e45-d401-4fc6-95ab-d291961149b0"
+                Id="319ace01-b5ad-411e-b37e-01467955f865"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a9cd7d1b-071a-44e2-8303-9fc67e91a419">
+                    Id="96dfbc80-f0f0-4793-a798-551d7dc4003d">
                     <propertyInstance
-                      Id="ac95a9e2-8b73-4967-ad1c-8dc3bf87f151"
+                      Id="a4d419c9-9354-40bf-8c0c-15e6f21dbd71"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1d4cb601-734b-4de1-97e3-30ea83a99900">
+                    Id="f8d5d450-8b0c-4c16-a715-0ad14e82c9dd">
                     <propertyInstance
-                      Id="ed22b7a9-cb1d-4afb-94e5-3c869192c45c"
+                      Id="1ed700c0-2d4a-4536-b90c-3c21b69aabc9"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c0f5f6d0-db00-4a37-b2dd-13811a5523e3">
+                    Id="c6ecb1cb-ed7d-4527-b000-779a0b1c7287">
                     <propertyInstance
-                      Id="70c9fae8-f2c0-4ba2-8748-40aff9709a85"
+                      Id="53708e6b-d4e3-48cb-a1f7-d77f7bb6b6de"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2ffb157b-98d5-42c9-9587-a5505d2b2f64">
+                    Id="d43e05a1-36ed-48ef-9c97-5ba2f75f9889">
                     <propertyInstance
-                      Id="32880933-80bb-4c34-a13d-df7b60fc22ad"
+                      Id="08fe38be-1ec1-49b7-bf84-370d8f17470c"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9747a00a-2323-4249-97e7-03cda5166d91">
+                    Id="5d058c98-d609-405b-b1a3-707b7a0e4b30">
                     <propertyInstance
-                      Id="74351f30-529e-44fe-bc90-c7cee574dc75"
+                      Id="f1afbdf7-928e-4ba3-8273-139e869d0b3a"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="85aeecca-35b2-4a57-9f23-1649b9ed7faf">
+                    Id="2d20100f-c422-465c-8740-087eaf1fbeae">
                     <propertyInstance
-                      Id="b77fee22-c87d-4a23-abfc-5ea1d7b36794"
+                      Id="db373aca-b3c5-444c-9b5e-0fecf144e103"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="5de4cb52-fba3-4472-8ba4-27704e99f310"
+            name="ChoiceOfReRoll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f53ca30b-39c0-4cdd-bf52-ea61971431f2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fjt222ic%2FDesktop%2FYatzee%2FYatzee%2FYatzee%2Fbin%2FDebug%2FYatzee.exe Namespace%3DYatzee.Controller Type%3DUser Member%3DChoiceOfReRoll"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1b52e875-1408-47f3-8d76-a45d01703ad0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da6061b6-b204-47b2-b773-69c3483ee00a">
+                    <propertyInstance
+                      Id="845d3fbd-1691-45e0-81f9-bada3684b86d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21e9a40f-9bf8-49b1-89cf-e0e3e4b0d53a">
+                    <propertyInstance
+                      Id="668119ca-51df-43e6-afd4-102ddae2cd8b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e5c3193-db2b-44ea-a786-f7741eeabe4c">
+                    <propertyInstance
+                      Id="46cfc519-d6f5-4c3e-a8e8-8de0ac05b4c7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04e6457c-aae6-4947-8d0c-f11fe861ef1c">
+                    <propertyInstance
+                      Id="859e672b-4c94-44c4-bf40-b28f228f6a2e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4eadf3c-4381-403b-9b3b-be56a01729a3">
+                    <propertyInstance
+                      Id="4e02b444-fd21-4733-b73f-994fb2e9ba59"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e19ec929-e579-42a4-9a18-3ea38f050c94">
+                    <propertyInstance
+                      Id="ee1c2a36-29b6-4e5d-b1f9-34396a6c4ca8"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

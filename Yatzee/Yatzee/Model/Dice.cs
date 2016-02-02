@@ -23,7 +23,7 @@ namespace Yatzee.Model
             unique = new List<int>();
             for (i = 1; i < 6; i++)
             {
-                unique.Add(RollNumber = random.Next(1, 3));
+                unique.Add(RollNumber = random.Next(5, 7));
             }
             return unique;
         }
@@ -31,7 +31,7 @@ namespace Yatzee.Model
         {
             if (!Prayer.HoldState)
             {
-                OldDice[whichdice] = random.Next(1, 3);
+                OldDice[whichdice] = random.Next(1, 7);
             }
             return OldDice;
         }
@@ -40,7 +40,7 @@ namespace Yatzee.Model
         {
             for (i = 0; i < BotDice.Count; i++)
             {
-                BotDice[i] = random.Next(1, 3);
+                BotDice[i] = random.Next(1, 7);
             }
 
             return BotDice;
