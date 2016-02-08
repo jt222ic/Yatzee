@@ -63,12 +63,88 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="ddf60c3b-dbad-4a69-a48a-bdccb87bcbdc" />
-              <suppliersInternal>
-                <dependency Id="224792b1-354c-451e-b5c3-a0fa2e9e117a">
-                  <classMoniker Id="ae0a4510-a07b-4245-bb94-7fcda8667479" LastKnownName="DAL" />
-                  <elementDefinition Id="5be971fa-862f-4534-8bce-df5030cb825e" />
-                </dependency>
-              </suppliersInternal>
+              <targetEnds>
+                <association Id="c84b3ecb-fbc0-4fcc-b9d7-05507dd17764" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Player" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="45839ca3-d182-44b6-8d56-f250e98749a3" LastKnownName="Player" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8ff5b167-3a90-4035-8136-8f84964ee733" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="0f0ed4f1-d5b7-42f9-9a86-7440afe0c027" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="48752a2a-425b-485e-9cf1-1dc64a8d8def" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="db5baeb7-320a-4e15-9581-0b585cd84e70" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6664bd90-c5f7-4c45-8aae-e27edc5b59e9" />
+                </association>
+                <association Id="4c832d0e-d155-49be-9f73-6d17423ce508" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Dice" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="732fafdc-f052-4ae4-af0d-1d4ed0d06329" LastKnownName="Dice" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9baefb3e-867c-4eaf-a5c2-326244a308d1" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="22397da2-4a90-47d4-aab4-304c76d88561" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5e66a3a4-4e30-4e13-b49f-9f090dbdeb3b" name="Dice" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="a8f4fe6c-9f1e-4bb6-bc8b-23fca8c93aa9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ce481c16-d2e2-4d6d-8088-5aeded575175" />
+                </association>
+                <association Id="565b5e88-d769-461f-8edc-ac57e52362eb" isDerived="false" sourceEndRoleName="User" targetEndRoleName="DiceRule" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ede08ec1-64ed-46bd-96de-078523f56c78" LastKnownName="DiceRule" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="917c14d3-d2c6-487e-b7a9-e999c0fa6dfb" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5b83dfde-029b-461c-bb55-815e8e066ea4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c09e731c-e457-4887-aa09-6a952e8917b5" name="DiceRule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="0e4de1cb-a4fa-4be5-a87f-b5a51ea72e1d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="390cb873-6c91-4880-b727-7b25b97205eb" />
+                </association>
+                <association Id="8d5dc9d8-0c15-422b-9ca8-02d6d16f391c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="ViewStatus" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0fd70ec7-9149-4835-a8f0-68bcdd3a3ba0" LastKnownName="ViewStatus" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="73a21621-41be-46d4-9f95-b7dd3bdc7d3b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d7208e94-f204-4b75-9d56-7ce3c89ed0e6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="aa3f7ce4-0c01-4ac2-b904-62953bb2b62d" name="ViewStatus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d7388a88-e251-4d78-8c12-f010d9db2ddf" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="828113e1-f25c-47ba-a555-67d9a565a254" />
+                </association>
+                <association Id="cc07efeb-ba18-4638-8763-276da735ea4c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="CheckBox" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="da265391-9759-45db-bc5b-7298a6ec5c5c" LastKnownName="CheckBox" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7e6a6605-08e8-4e4c-bfbc-9bf7ecdc2d7b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="82ef18d5-aaaf-4b95-a20d-15577109977a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1e810b29-593e-45c4-9a5f-684e41908574" name="CheckBox" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="48dbd1cc-f171-4010-bb4b-ac3175617360" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="3f69add6-4f9a-4be9-85e8-f8dc3dbaa294" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="237f3b8a-250c-4fc0-8469-5e43506b3304" name="show" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
@@ -1371,6 +1447,10 @@
                   <classMoniker Id="45839ca3-d182-44b6-8d56-f250e98749a3" LastKnownName="Player" />
                   <elementDefinition Id="443598fb-b05e-4c9d-9dd3-1f7bf03f2aef" />
                 </dependency>
+                <dependency Id="9aa92784-526b-438f-afbf-a3e30465bbb1">
+                  <classMoniker Id="757ba8a2-f12e-42bd-8f66-3b2cdabf698d" LastKnownName="Computer" />
+                  <elementDefinition Id="9db7dddf-e06f-47da-8bdb-830823775c64" />
+                </dependency>
               </suppliersInternal>
               <ownedOperationsInternal>
                 <operation Id="68788e87-c6ca-4358-9b00-d04d3509691f" name="DisplayFirstPage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -2204,6 +2284,24 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="f20b339d-2db9-4008-9396-883b1dd404fc" />
+              <targetEnds>
+                <association Id="3c14dee3-c0f2-4efc-8666-9121bf11443f" isDerived="false" sourceEndRoleName="DiceRule" targetEndRoleName="ViewStatus" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0fd70ec7-9149-4835-a8f0-68bcdd3a3ba0" LastKnownName="ViewStatus" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="43f84d91-4aa8-4cac-a1e7-599169228e60" name="DiceRule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5729a27c-c8eb-4033-a88b-5681aec1e212" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="72ce4b69-1492-49cd-b7a6-62ca80883ac1" name="ViewStatus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="e4eb6dd9-d65d-4752-a31b-c6862a84ed94" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="49c2494f-c1ae-455a-b5c8-e049ddfc9564" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="8ddbe04c-bfde-4acc-b1df-0b4dbc282f74" name="Sum" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>
@@ -3532,6 +3630,10 @@
                 <dependency Id="fd3ec985-e737-4d2d-b9f1-733666876478">
                   <classMoniker Id="da265391-9759-45db-bc5b-7298a6ec5c5c" LastKnownName="CheckBox" />
                   <elementDefinition Id="cdb7a09a-2ee2-428e-8815-1f5ecb948a7c" />
+                </dependency>
+                <dependency Id="736412f8-caec-4ac5-b3aa-8d458936b1ce">
+                  <classMoniker Id="45839ca3-d182-44b6-8d56-f250e98749a3" LastKnownName="Player" />
+                  <elementDefinition Id="66e1501a-f75b-4981-b851-76bc412811df" />
                 </dependency>
               </suppliersInternal>
               <ownedAttributesInternal>
@@ -9531,6 +9633,10 @@
                   <classMoniker Id="45839ca3-d182-44b6-8d56-f250e98749a3" LastKnownName="Player" />
                   <elementDefinition Id="9eb6478c-4e56-438f-972d-8b0d6516f63b" />
                 </dependency>
+                <dependency Id="805dbfa0-b46f-471b-a54f-d0b0e8a3c34f">
+                  <classMoniker Id="ec239981-37a8-442d-8925-9c15e613ead6" LastKnownName="Ai" />
+                  <elementDefinition Id="203df3fd-d48c-4da4-9988-e26393e2f99b" />
+                </dependency>
               </suppliersInternal>
               <ownedAttributesInternal>
                 <property Id="40d483d2-7b26-459b-88d4-cc7bc8919935" name="_FILE_PATH" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -10220,12 +10326,68 @@
                 </stereotypeInstance>
               </appliedStereotypesInternal>
               <elementDefinition Id="386e55be-5af6-4e61-a719-0a87b63460be" />
+              <suppliersInternal>
+                <dependency Id="4a44380d-14d0-4931-9205-257569fdbbcc">
+                  <classMoniker Id="ec239981-37a8-442d-8925-9c15e613ead6" LastKnownName="Ai" />
+                  <elementDefinition Id="dcd0e3ff-69d8-427b-8878-9659ff431873" />
+                </dependency>
+              </suppliersInternal>
               <generalsInternal>
                 <generalization Id="c22c5e51-77be-4b38-b2c1-7d317359ad8a" isSubstitutable="false">
                   <classMoniker Id="757ba8a2-f12e-42bd-8f66-3b2cdabf698d" LastKnownName="Computer" />
                   <elementDefinition Id="dbc2e250-4adb-48fc-a600-8d092260cc7b" />
                 </generalization>
               </generalsInternal>
+              <targetEnds>
+                <association Id="14b313e6-0f31-4735-b8ab-825647db2565" isDerived="false" sourceEndRoleName="Ai" targetEndRoleName="Player" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="45839ca3-d182-44b6-8d56-f250e98749a3" LastKnownName="Player" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a8a738df-c068-47c8-8dff-d7c2be8ca6be" name="Ai" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="f17fca82-95a3-416f-9d92-bc8645c2ca4b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2283d563-19e8-4ec9-a5a8-777661a2ccea" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="a743c41f-a9a8-442b-8429-c9eaee550c1e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2211bd63-2cbc-4e38-be8b-4191a92ae8c4" />
+                </association>
+                <association Id="7094e2cc-c4bc-4dec-83d8-af1a53bd053d" isDerived="false" sourceEndRoleName="Ai" targetEndRoleName="Dice" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="732fafdc-f052-4ae4-af0d-1d4ed0d06329" LastKnownName="Dice" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9a408d2d-9ca0-4ae3-b8ed-a91bb7223cf4" name="Ai" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="9bf7becc-0fb6-44e6-938a-ce0feace5797" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="15ba0604-d1a8-412e-b946-09cabe02a2d5" name="Dice" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="cc211b95-6142-4e18-a4ab-40accfc2fff5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="5bbd555f-13b0-47a4-89ce-77f9aedec9de" />
+                </association>
+                <association Id="e3b0afdc-5d64-49f6-bb2e-a680c835cd03" isDerived="false" sourceEndRoleName="Ai" targetEndRoleName="ViewStatus" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0fd70ec7-9149-4835-a8f0-68bcdd3a3ba0" LastKnownName="ViewStatus" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="efcc755c-9679-4f83-aa79-97489460371e" name="Ai" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8d2d27d6-cb6b-4c88-a6b9-94fef042390a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="193649ea-2304-44ac-939d-ddd42f94dbd2" name="ViewStatus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="eeb1fed9-b5ea-4985-8209-6d14a215200b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9d4647f4-0b6c-4087-9ce9-068f9e5264b7" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="aa13d312-c833-4977-9841-fc77f16923ea" name="LargeStraight1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <referencesInternal>

@@ -10,21 +10,16 @@ namespace Yatzee.Model
     
     class Ai : Computer
     {
-       
         Player Player;
         DiceRule Rule;
         Dice Roll;
         Random random;
         ViewStatus Show;
-      
- 
-
-        int[] SmallStraight1;
-        int[] SmallStraight2;
-        int[] SmallStraight3;
-
+        bool small;
+        List<int> Regel = new List<int>();
         int[] LargeStraight1;
         int[] LargeStraight2;
+        bool LowerExist;
         public Ai(Player player, DiceRule rule, Dice roll, ViewStatus show)
         {
             Player = player;
@@ -53,54 +48,62 @@ namespace Yatzee.Model
         public void RollDice(Dice Roll)
         
         {
+
+            LowerExist = false;
             List<int> AiRoll = Roll.Roll();
             List<int> storedDiceValues = new List<int>();    
             List<int> ValuesNew = new List<int>();
+
+            
             int computervalue = random.Next(1, 6);
-            int[] AiArray = new int[5];
+            int[] AiArray = AiRoll.ToArray();
             int sum = 0;
             LargeStraight1 = new int[]{2,3,4,5,6};
             LargeStraight2 = new int[]{1,2,3,4,5};
-           
 
-            for (int i = 0; i<AiRoll.Count;i++ )
-            {
-               
-                AiArray[i] = AiRoll[i];
 
-                    SmallStraight1 = new int[] { 1, 2, 3, 4, i };
-                    SmallStraight2 = new int[] { 2, 3, 4, 5, i };
-                    SmallStraight3 = new int[] { 3, 4, 5, 6, i };
-            }
-             Array.Sort(AiArray);
-             AiLowerSection(AiArray, AiRoll, storedDiceValues);
-            foreach (int lista in AiArray)
+            int[] values = new int[6];
+            Dictionary<int, int> finalValues = new Dictionary<int, int>();
+
+            foreach (int diceValue in AiRoll)
             {
-                Console.WriteLine("DICE {0}", lista);
+                if (!finalValues.ContainsKey(diceValue))
+                {
+                    finalValues.Add(diceValue, 0);
+                }
+                finalValues[diceValue]++;
             }
-            foreach (int plista in storedDiceValues)
+            foreach (KeyValuePair<int, int> storage in finalValues)
             {
-                Console.WriteLine("Storage {0}", plista);
+             Console.WriteLine("STORAGE {0} x{1}", storage.Key, storage.Value);
             }
-            System.Threading.Thread.Sleep(1000);
-            if (storedDiceValues.Count <3)
+            small = finalValues.ContainsKey(1) && finalValues.ContainsKey(2) && finalValues.ContainsKey(3) && finalValues.ContainsKey(4);
+            AiLowerSection(AiArray, AiRoll, finalValues);
+
+            if (finalValues.Values.Max() <3 &&!LowerExist)
             {
-                for (int j = 0; j < storedDiceValues.Count; j++)
+                if (!LowerExist)
                 {
-                    AiRoll.RemoveAt(j);
+                    for (int k = finalValues.Values.Max(); k > 0; k--)
+                    {
+                        AiRoll.RemoveAt(k);
+                    }
+                    AiLowerSection(AiArray, AiRoll, finalValues);
+                    Roll.BotReRoll(AiRoll);
+                    ValuesNew = Storage(storedDiceValues, AiRoll, AiArray);
                 }
-                Roll.BotReRoll(AiRoll);
-                ValuesNew = Storage(storedDiceValues, AiRoll, AiArray);
-                for (int j = 5; j < ValuesNew.Count; j--)
+                if (!LowerExist)
                 {
-                    AiRoll.RemoveAt(j);
+                    foreach (int situation in AiRoll)
+                    {
+                        Console.WriteLine(" second reroll{0}", situation);
+                    }
+                    ValuesNew = Storage(storedDiceValues, AiRoll, AiArray);
+
+                    sum = finalValues.Values.Max();
+                    Roll.BotReRoll(AiRoll);
+                    Rule.AddUpDice(AiRoll, sum);
                 }
-                foreach (int p in ValuesNew)
-                {
-                    Console.WriteLine("End Result from Storage {0}", p);
-                }
-                sum= storedDiceValues.Max();
-                Rule.AddUpDice(ValuesNew, sum);
             }
         }
         public List<int> Storage(List<int> storedDiceValues, List<int> Airoll, int[] AiArray)
@@ -111,36 +114,42 @@ namespace Yatzee.Model
             }
             return storedDiceValues;
         }
-
-        public void AiLowerSection(int[] AiArray, List<int> AiRoll, List<int> storedDiceValues)
+        public void AiLowerSection(int[] AiArray, List<int> AiRoll, Dictionary<int,int> Final)
         {
-            if (storedDiceValues.Count>4)
-            {
-                GetYatzee = Rule.Yatzee(AiRoll);
-            }
-            else if (storedDiceValues.Count>3)
-            {
-                GetFourOfAKind = Rule.FourOfAKind(AiRoll);
-            }
-            else if (storedDiceValues.Count>2)
-            {
-                GetThreeOfAKind = Rule.ThreeOfAKind(AiRoll);
-            }
 
-            if (AiArray == SmallStraight1 || AiArray == SmallStraight2 || AiArray == SmallStraight3)  // works
+            foreach (KeyValuePair<int, int> final in Final)
             {
-              GetSmallStraight= Rule.SmallStraight(AiRoll);
-                Console.WriteLine("Small Straight for bot");
+                if (final.Value > 4)
+                {
+                    GetYatzee = Rule.Yatzee(AiRoll);
+                    LowerExist = true;
+                }
+                else if (final.Value > 3)
+                {
+                    GetFourOfAKind = Rule.FourOfAKind(AiRoll);
+                    LowerExist = true;
+                }
+                else if (final.Value > 2)
+                {
+                    GetThreeOfAKind = Rule.ThreeOfAKind(AiRoll);
+                    LowerExist = true;
+                }
             }
             Array.Sort(AiArray);
-           
-            if (AiArray == LargeStraight1 || AiArray == LargeStraight2)   // works
+            if (AiArray == LargeStraight1 || AiArray == LargeStraight2)   // works ??
             {
-              GetLargeStraight= Rule.LargeStraight(AiRoll);
-                Console.WriteLine("LArgeStraight for bot");
+               
+                GetLargeStraight = Rule.LargeStraight(AiRoll);
+                LowerExist = true;
             }
-        
+            else if(small)
+            {
+                  // works
+                GetLargeStraight = Rule.LargeStraight(AiRoll);
+                LowerExist = true;
+            }
         }
+
         }
     }
 

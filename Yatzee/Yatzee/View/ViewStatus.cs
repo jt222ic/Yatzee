@@ -32,6 +32,7 @@ namespace Yatzee.View
             System.Console.WriteLine("Press 0 to return one page and avoid crashing the set points after an input");
             System.Console.WriteLine("During set points if you want to get lower section press 7");
             System.Console.WriteLine("press 0 twice to return to main page from lower section");
+            System.Console.WriteLine("The Game will crash if you dont input number key");
             System.Console.WriteLine("==========================================");
             System.Console.WriteLine("0.Roll a dice  || roll only 1x here until you have set your points");
             System.Console.WriteLine("1. press to save");

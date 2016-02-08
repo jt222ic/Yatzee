@@ -84,6 +84,13 @@
               LastKnownName="Player"
               LastKnownLocation="Package3_1903.uml" />
           </dependency>
+          <dependency
+            Id="9db7dddf-e06f-47da-8bdb-830823775c64">
+            <classMoniker
+              Id="a20b8a6e-f1b5-4662-814f-635bfdb266cc"
+              LastKnownName="Computer"
+              LastKnownLocation="Package3_1903.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
           <operation

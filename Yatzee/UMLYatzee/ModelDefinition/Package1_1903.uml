@@ -84,14 +84,204 @@
               LastKnownName="DAL static"
               LastKnownLocation="Package3_1903.uml" />
           </dependency>
-          <dependency
-            Id="5be971fa-862f-4534-8bce-df5030cb825e">
-            <classMoniker
-              Id="271d8b7f-4768-49c1-a78e-400a6e09d9be"
-              LastKnownName="DAL"
-              LastKnownLocation="Package3_1903.uml" />
-          </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="6664bd90-c5f7-4c45-8aae-e27edc5b59e9"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5ad6a4b4-7366-4e51-9294-e63d3cef614b"
+              LastKnownName="Player"
+              LastKnownLocation="Package3_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f0ed4f1-d5b7-42f9-9a86-7440afe0c027"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db5baeb7-320a-4e15-9581-0b585cd84e70"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ce481c16-d2e2-4d6d-8088-5aeded575175"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Dice"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="55eb7c31-d920-4a9a-b13d-10be4ee9d4cd"
+              LastKnownName="Dice"
+              LastKnownLocation="Package3_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22397da2-4a90-47d4-aab4-304c76d88561"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a8f4fe6c-9f1e-4bb6-bc8b-23fca8c93aa9"
+                  name="Dice"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="390cb873-6c91-4880-b727-7b25b97205eb"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="DiceRule"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f20b339d-2db9-4008-9396-883b1dd404fc"
+              LastKnownName="DiceRule"
+              LastKnownLocation="Package3_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b83dfde-029b-461c-bb55-815e8e066ea4"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e4de1cb-a4fa-4be5-a87f-b5a51ea72e1d"
+                  name="DiceRule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="828113e1-f25c-47ba-a555-67d9a565a254"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="ViewStatus"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="405ab489-6193-461a-b882-d719c78ece22"
+              LastKnownName="ViewStatus"
+              LastKnownLocation="Package2_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7208e94-f204-4b75-9d56-7ce3c89ed0e6"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7388a88-e251-4d78-8c12-f010d9db2ddf"
+                  name="ViewStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3f69add6-4f9a-4be9-85e8-f8dc3dbaa294"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="CheckBox"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fdd9ce1f-ebc7-41f3-b6dd-0072eb82d80d"
+              LastKnownName="CheckBox"
+              LastKnownLocation="Package3_1903.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82ef18d5-aaaf-4b95-a20d-15577109977a"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="48dbd1cc-f171-4010-bb4b-ac3175617360"
+                  name="CheckBox"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e512d9ab-d502-40af-ac9d-982dc320dc95"

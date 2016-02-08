@@ -35,7 +35,6 @@ namespace Yatzee.Model
             {
                 if (DiceList[i] == playerValue)
                 {
-
                     Sum += playerValue;
                     TotalScore += playerValue;
                     BonusSum += playerValue;
@@ -46,6 +45,8 @@ namespace Yatzee.Model
             return Sum;
 
         }
+
+
         public int ThreeOfAKind(List<int> Dice)
         {
             Sum = 0;
@@ -252,6 +253,6 @@ namespace Yatzee.Model
             show.showResult(Sum);
             return Sum;
         }
-     
+
     }
 }

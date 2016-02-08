@@ -207,7 +207,8 @@ namespace Yatzee.Controller
             {
                     string choices = System.Console.ReadLine();
                     int PlayerValue;
-                    int RuleChoice = int.Parse(choices);
+                    
+                int RuleChoice = int.Parse(choices);
                     Tossthree = 0;
                     perforReRoll = false;
                     player.TOTALSCORE = Rules.TotalScore;
