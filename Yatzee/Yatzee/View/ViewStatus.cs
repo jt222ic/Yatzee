@@ -42,6 +42,7 @@ namespace Yatzee.View
             System.Console.WriteLine("5. CompactList: Name,TotalScore, Date");
             System.Console.WriteLine("6. FullList: Date, and FullScoring");
             System.Console.WriteLine("7. Resume, load List || Must pick player ID before playing the game again");
+            System.Console.WriteLine("8. Let the Bot Roll");
         
         }
 
